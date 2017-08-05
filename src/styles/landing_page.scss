@@ -1,0 +1,43 @@
+.main_container {
+  background: white;
+}
+
+.full_page {
+  height: 100vh;
+  width: 100vw;
+
+  &:first-child {
+    height: 50vh;
+    border-bottom: 1px solid white;
+  }
+
+  &.page_one {
+    // background: url('http://wallpapercave.com/wp/E69rQhT.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      span {
+        color: #373737;
+        letter-spacing: 3px;
+        font-size: 30px;
+      }
+
+      img {
+        margin: 0 45px 0 40px;
+      }
+    }
+
+    img {
+
+    }
+  }
+
+  &.page_two {
+    background-image: url('../assets/star.png');
+  }
+}
