@@ -13,7 +13,7 @@ import App from './container/App';
 
 import reducers from './reducers/index';
 
-import * as axiosConfig from './config/axios_config'
+import './config/sdk_config'
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);

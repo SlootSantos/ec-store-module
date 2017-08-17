@@ -12,24 +12,24 @@ import ProductTile from '../components/product_tile'
 import logo from '../logo.svg';
 import '../styles/App.css';
 
-import { fetchProducts } from '../actions/fetch_products';
+import { fetchAllProducts } from '../actions/fetch_all_products';
 
 class App extends Component {
   constructor(props) {
     super(props)
 
-    this.props.fetchProducts();
-
+    this.props.fetchAllProducts();
   }
 
   renderProductsToDom(products) {
-    if (!products.length) return;
 
-    return products[0].data.map(product => {
-      let image = products[0].included ? products[0].included.main_images[products[0].data.indexOf(product)].link.href : null;
+    if (!products || !products.length) return;
 
+    return products.map(product => {
+      let { id, image_url } = product;
+      console.log(product);
       return (
-        <ProductTile key={product.name} product={product} img={image}/>
+        <ProductTile key={id} product={product} img={image_url}/>
       );
     });
   }
@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LandingPage />
+          { this.renderProductsToDom(this.props.products.products) }
       </div>
     );
   }
@@ -53,7 +53,7 @@ function mapStateToProps({ products }) {
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchProducts }, dispatch);
+  return bindActionCreators({ fetchAllProducts }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
