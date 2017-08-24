@@ -23,7 +23,6 @@ class App extends Component {
   }
 
   renderProductsToDom(products) {
-    debugger
 
     if (!products || !products.length) return;
 
