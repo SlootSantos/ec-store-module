@@ -4,7 +4,9 @@ node_js:
 - '8'
 before_script:
 - yarn install
-- yarn build
+- npm rebuild node-sass
+after_script:
+  - yarn build
 notifications:
   email:
     recipients:
