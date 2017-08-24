@@ -7,7 +7,7 @@ export default function(state = [], action) {
    switch (action.type) {
      case FETCH_SINGLE_PRODUCT:
       return action.payload.data.data;
+    default:
+      return state;
    }
-
-   return state;
  }

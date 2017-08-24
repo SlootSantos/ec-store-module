@@ -7,21 +7,23 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-import LandingPage from '../components/landing_page'
+// import LandingPage from '../components/landing_page'
 import ProductTile from '../components/product_tile'
-import logo from '../logo.svg';
 import '../styles/App.css';
 
 import { fetchAllProducts } from '../actions/fetch_all_products';
+import { getCart } from '../actions/get_cart';
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.props.fetchAllProducts();
+    this.props.getCart();
   }
 
   renderProductsToDom(products) {
+    debugger
 
     if (!products || !products.length) return;
 
@@ -45,15 +47,17 @@ class App extends Component {
 }
 
 // map state to props
-function mapStateToProps({ products }) {
+function mapStateToProps({ products, cart }) {
+
   return {
-    products
+    products,
+    cart
   };
 }
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchAllProducts }, dispatch);
+  return bindActionCreators({ fetchAllProducts, getCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import '../styles/landing_page.css';
 import coffee from '../assets/coffee.svg';
-import star from '../assets/star.png';
 
 class LandingPage extends Component {
 
