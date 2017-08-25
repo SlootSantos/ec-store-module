@@ -1,11 +1,10 @@
 language: node_js
 node_js:
 - '8'
+before_install:
+  - yarn clean
+  - rm .yarnclean
 before_script:
-- yarn clean
-- rm .yarnclean
-- rm -rf node_modules
-- yarn install
 - npm rebuild node-sass
 - yarn build
 - ls
