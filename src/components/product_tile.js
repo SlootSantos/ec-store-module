@@ -11,7 +11,7 @@ class ProductTile extends Component {
 
     return (
       <div className="product_tile">
-        <div className="product_name"><b>Name:</b> { product.name } </div>
+        <div className="product_name"><b>Name of coffee:</b> { product.name } </div>
         <img src={img} alt="" width="300"/>
         <AddCartButton prodId={product.id}/>
       </div>
