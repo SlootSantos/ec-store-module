@@ -4,6 +4,7 @@ node_js:
 before_install:
   - yarn clean
   - rm .yarnclean
+  - yarn add https://github.com/SlootSantos/ec-JS-SDK.git
 before_script:
 - npm rebuild node-sass
 - yarn build
