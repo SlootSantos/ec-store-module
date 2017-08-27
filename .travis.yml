@@ -25,4 +25,5 @@ deploy:
   local-dir: build
   skip_cleanup: true
   on:
+    branch: develop
     repo: SlootSantos/ec-store-module
