@@ -8,7 +8,7 @@ import ReduxPromise from 'redux-promise';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import LandingPage from './components/landing_page';
+import LandingPage from './container/landing_page';
 import App from './container/App';
 
 import reducers from './reducers/index';

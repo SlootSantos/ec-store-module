@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 
-// import LandingPage from '../components/landing_page'
-import ProductTile from '../components/product_tile'
+// import LandingPage from '../container/landing_page'
+import ProductTile from '../container/product_tile'
 import '../styles/App.css';
 
 import { fetchAllProducts } from '../actions/fetch_all_products';
@@ -39,7 +39,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          { this.renderProductsToDom(this.props.products.products) }
+          {/* { this.renderProductsToDom(this.props.products.products) } */}
+          HELLO WORLD!
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AddCartButton from './add_cart_button';
+import AddCartButton from '../components/add_cart_button';
 
 import '../styles/product_tile.css';
 

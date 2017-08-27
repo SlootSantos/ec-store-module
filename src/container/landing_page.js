@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+// import full pages
+import FullpageOne from '../components/fullpage_one';
+import FullPageTwo from '../components/fullpage_two';
+import FullPageThree from '../components/fullpage_three';
+
+
 import '../styles/landing_page.css';
 import coffee from '../assets/coffee.svg';
 
