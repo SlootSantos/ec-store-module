@@ -1,0 +1,20 @@
+.coming-soon {
+  padding: 30px;
+  text-align: center;
+  font-family: ClearSansLightRegular;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #502c2c; }
+  .coming-soon .coming-soon__impressum {
+    padding-top: 50px; }
+  .coming-soon a {
+    color: black; }
+    .coming-soon a:hover {
+      opacity: .6; }
+  .coming-soon img {
+    padding-bottom: 30px; }
+  @media screen and (max-width: 400px) {
+    .coming-soon {
+      font-size: 15px; }
+      .coming-soon img {
+        width: 250px; } }

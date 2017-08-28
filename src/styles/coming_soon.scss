@@ -1,0 +1,37 @@
+$break-small: 400px;
+$break-large: 1200px;
+
+
+.coming-soon {
+  padding: 30px;
+  text-align: center;
+  font-family: ClearSansLightRegular;
+  font-weight: lighter;
+  font-size: 20px;
+  color: #502c2c;
+
+
+  .coming-soon__impressum {
+    padding-top: 50px;
+  }
+
+  a {
+    color: black;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  img {
+    padding-bottom: 30px;
+  }
+
+
+  @media screen and (max-width: $break-small) {
+    font-size: 15px;
+    img {
+      width: 250px;
+    }
+  }
+}
