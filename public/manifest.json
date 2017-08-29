@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "VO COFFEE",
+  "name": "VO COFFEE coming soon",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "192x192",
-      "type": "image/png"
+      "sizes": "62*62",
+      "type": "image/jpg"
     }
   ],
   "start_url": "./index.html",
