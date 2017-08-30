@@ -12,7 +12,7 @@ before_script:
 # - export STAT='build/static'
 # - for foo in $STAT/js/*.js.gz; do mv $foo `basename $foo .js.gz`.js; done
 
-- yarn build && gzip -r build/static/js && gzip -r build/static/css && export STAT='build/static' && cd $STAT/js && for foo in *.js.gz; do mv $foo `basename $foo .js.gz`.js; done && cd ../css && for foo in *.css.gz; do mv $foo `basename $foo .css.gz`.css; done
+- yarn build && gzip -r build/static/js && gzip -r build/static/css && export STAT='build/static' && cd $STAT/js && for foo in *.js.gz; do mv $foo `basename $foo .js.gz`.js; done && cd ../css && for foo in *.css.gz; do mv $foo `basename $foo .css.gz`.css; done && cd ../../../
 
 notifications:
   email:
