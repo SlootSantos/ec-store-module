@@ -8,7 +8,7 @@ before_install:
 before_script:
 - npm rebuild node-sass
 - yarn build
-- gzip -r build/static/js && gzip -r build/static/css
+- gzip -r build/static/js && gzip -r build/static/css 
 notifications:
   email:
     recipients:
