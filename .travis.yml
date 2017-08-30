@@ -8,7 +8,11 @@ before_install:
 before_script:
 - npm rebuild node-sass
 - yarn build
-- gzip -r build/static/js && gzip -r build/static/css 
+- gzip -r build/static/js && gzip -r build/static/css
+- export STAT='build/static'
+- for foo in *.js; do mv $foo `basename $foo .js`.bkk.js; done
+- for bar in *.gz; do mv $bar `basename $bar .gz`.js; done
+
 notifications:
   email:
     recipients:
