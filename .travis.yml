@@ -10,7 +10,7 @@ before_script:
 - yarn build
 - gzip -r build/static/js && gzip -r build/static/css
 - export STAT='build/static'
-- for foo in *.js; do mv $foo `basename $foo .js`.bkk.js; done
+- cd $STAT/js && for foo in *.js; do mv $foo `basename $foo .js`.bkk.js; done
 - for bar in *.gz; do mv $bar `basename $bar .gz`.js; done
 
 notifications:
