@@ -1,11 +1,12 @@
 import React from 'react';
 
 import '../styles/coming_soon.css';
+import ComingSoonImg from '../assets/ComingSoon.jpg';
 
 function ComingSoon() {
   return(
     <div className="coming-soon">
-      <img src="http://www.vo-coffee.de/ComingSoon.jpg" alt=""/>
+      <img src={ComingSoonImg} alt=""/>
 
 
 
