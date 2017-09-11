@@ -1,0 +1,24 @@
+.header {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.header__nav {
+  position: absolute;
+  font-size: x-small;
+  word-spacing: 5px; }
+  .header__nav.logo {
+    font-size: 25px; }
+  .header__nav.right {
+    right: 50px; }
+    .header__nav.right .opening_time {
+      word-spacing: normal; }
+  .header__nav.left {
+    left: 50px; }
+    .header__nav.left .phone_number {
+      color: yellow; }

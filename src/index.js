@@ -8,10 +8,7 @@ import ReduxPromise from 'redux-promise';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import LandingPage from './container/landing_page';
-// import App from './container/App';
-import ComingSoon from './components/coming_soon';
-
+import App from './container/App';
 import reducers from './reducers/index';
 
 import './config/sdk_config'
@@ -25,8 +22,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/land" component={ LandingPage }></Route>
-          <Route path="/" component={ ComingSoon }></Route>
+          <Route path="/" component={ App }></Route>
         </Switch>
       </div>
     </BrowserRouter>
