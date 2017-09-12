@@ -1,6 +1,20 @@
+$break-small: 400px;
+$break-medium: 767px;
+$break-large: 1200px;
+
 .full_page {
 
   &.fp__one {
-    background: #502c2c;
+    background: #482d2a;
+
+    img {
+      height: 500px;
+    }
+
+    @media screen and (max-width: $break-medium) {
+      img {
+        height: 300px;
+      }
+    }
   }
 }

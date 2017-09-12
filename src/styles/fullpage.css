@@ -1,2 +1,7 @@
 .full_page.fp__one {
-  background: #502c2c; }
+  background: #482d2a; }
+  .full_page.fp__one img {
+    height: 500px; }
+  @media screen and (max-width: 767px) {
+    .full_page.fp__one img {
+      height: 300px; } }
