@@ -2,6 +2,7 @@
   width: 100vw;
   height: 50px;
   position: fixed;
+  z-index: 999;
   background: black;
   color: white;
   display: flex;
@@ -12,12 +13,18 @@
   position: absolute;
   font-size: x-small;
   word-spacing: 5px; }
-  .header__nav.logo {
-    font-size: 25px; }
+  .header__nav.logo img {
+    max-height: 100%;
+    width: 25px; }
   .header__nav.right {
-    right: 50px; }
+    right: 50px;
+    display: -webkit-inline-box; }
     .header__nav.right .opening_time {
       word-spacing: normal; }
+    .header__nav.right .social-icons img {
+      cursor: pointer;
+      padding: 0 5px;
+      height: 10px; }
   .header__nav.left {
     left: 50px; }
     .header__nav.left .phone_number {

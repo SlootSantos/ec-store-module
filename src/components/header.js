@@ -2,7 +2,9 @@ import React from 'react';
 
 import '../styles/header.css';
 
-// import Phone from '../assets/smartphone.svg';
+import Logo from '../assets/vo_coffee_logo_white.svg';
+import facebook from '../assets/facebook-logo.svg';
+import instagram from '../assets/instagram-logo.svg';
 
 
 function Header() {
@@ -12,11 +14,20 @@ function Header() {
         FAQ | Contact | <span className="phone_number">+49 123456</span>
       </div>
       <div className="header__nav logo">
-        V | O
+        <img src={Logo} alt=""/>
       </div>
       <div className="header__nav right">
-        <span className="opening_time">Mo - Fr: 08:00 - 18:00</span> | F & $
+        <span className="opening_time">Mo - Fr: 08:00 - 18:00</span> | { renderIcons() }
       </div>
+    </div>
+  )
+};
+
+function renderIcons() {
+  return (
+    <div className="social-icons">
+      <img src={facebook} alt=""/>
+      <img src={instagram} alt=""/>
     </div>
   )
 };

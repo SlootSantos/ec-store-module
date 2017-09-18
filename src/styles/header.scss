@@ -7,6 +7,7 @@ $break-large: 1200px;
   height: 50px;
 
   position: fixed;
+  z-index: 999;
   background: black;
   color: white;
 
@@ -22,14 +23,27 @@ $break-large: 1200px;
   word-spacing: 5px;
 
   &.logo {
-    font-size: 25px;
+    img {
+      max-height: 100%;
+      width: 25px;
+    }
   }
 
   &.right {
     right: 50px;
+    display: -webkit-inline-box;
 
     .opening_time {
       word-spacing: normal;
+    }
+
+    .social-icons {
+      img {
+        cursor: pointer;
+
+        padding: 0 5px;
+        height: 10px;
+      }
     }
   }
 

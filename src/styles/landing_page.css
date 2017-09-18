@@ -2,8 +2,8 @@
   background: white; }
 
 .full_page {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   background: white;
   display: flex;
   justify-content: center;
