@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/fullpage.css';
+import '../styles/fullpage/fullpage.css';
 
 import Logo from '../assets/vo_coffee_logo_white.svg';
 

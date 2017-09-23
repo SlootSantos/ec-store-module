@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/header.css';
+import '../styles/header/header.css';
 
 import Logo from '../assets/vo_coffee_logo_white.svg';
 import facebook from '../assets/facebook-logo.svg';

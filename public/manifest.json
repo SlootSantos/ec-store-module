@@ -3,9 +3,9 @@
   "name": "VO COFFEE",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "62*62",
-      "type": "image/jpg"
+      "src": "favicon.png",
+      "sizes": "48x48 72x72 96x96 144x144 168x168 192x192 512x512",
+      "type": "image/png"
     }
   ],
   "start_url": "./index.html",

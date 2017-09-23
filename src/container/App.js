@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 
 
 import LandingPage from '../container/landing_page'
-import '../styles/App.css';
+import '../styles/app/App.css';
 
 // import { fetchAllProducts } from '../actions/fetch_all_products';
 // import { getCart } from '../actions/get_cart';

@@ -38,4 +38,19 @@
     text-align: left; }
 
 .full_page.fp__three {
-  background: red; }
+  background: aliceblue; }
+  .full_page.fp__three .fp__three-item-wrapper {
+    display: inline-flex; }
+    .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%; }
+      .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble.outter {
+        height: 120px;
+        width: 120px;
+        margin: 10px;
+        border: 2px solid #999; }
+      .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble.inner {
+        width: 100px;
+        height: 100px; }

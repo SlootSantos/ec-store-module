@@ -78,6 +78,32 @@ $primaryColor: #482d2a;
 
 
   &.fp__three {
-    background: red;
+    background: aliceblue;
+
+    .fp__three-item-wrapper {
+      display: inline-flex;
+
+      .fp__three-item-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+
+
+        &.outter {
+          height: 120px;
+          width: 120px;
+          margin: 10px;
+
+          border: 2px solid #999;
+        }
+
+        &.inner {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
   }
 }

@@ -11,7 +11,7 @@ import FullPageTwo from '../components/fullpage_two';
 import FullPageThree from '../components/fullpage_three';
 
 
-import '../styles/landing_page.css';
+import '../styles/landingpage/landing_page.css';
 
 class LandingPage extends Component {
 

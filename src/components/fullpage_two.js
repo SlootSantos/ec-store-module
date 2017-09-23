@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/fullpage.css';
+import '../styles/fullpage/fullpage.css';
 
 
 function prodDescription(products) {
