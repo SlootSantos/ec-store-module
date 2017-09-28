@@ -10,9 +10,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 // import App from './container/App';
 import LandingPage from './container/landing_page';
-import ProductPage from './container/product_page';
-import CheckoutPage from './container/checkout_page';
-import Cart from './container/cart';
+// import ProductPage from './container/product_page';
+// import CheckoutPage from './container/checkout_page';
+// import Cart from './container/cart';
 // import header && footer
 import Header from './components/header';
 import Footer from './components/footer';
@@ -33,9 +33,9 @@ ReactDOM.render(
 
         <div className="switch_content">
           <Switch>
-            <Route path="/shop/checkout" component={ CheckoutPage }></Route>
+            {/* <Route path="/shop/checkout" component={ CheckoutPage }></Route>
             <Route path="/shop/cart" component={ Cart }></Route>
-            <Route path="/shop/:product-:id" component={ ProductPage }></Route>
+            <Route path="/shop/:product-:id" component={ ProductPage }></Route> */}
             <Route path="/" component={ LandingPage }></Route>
           </Switch>
         </div>
