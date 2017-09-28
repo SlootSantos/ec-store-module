@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ImgLeo from '../assets/leo_web.webp';
-import ImgLuc from '../assets/lucina_web.webp';
+// import ImgLuc from '../assets/lucina_web.webp';
 import ImgPetra from '../assets/petra_web.webp';
 import ImgPhil from '../assets/philipp_web.webp';
 import ImgFlo from '../assets/flo_square.webp';
