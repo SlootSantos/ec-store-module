@@ -58,9 +58,11 @@ function renderTeamBubbles() {
   // TODO: FIX TEXT ALIGNMENT INSIDE OF BUBBLE
   return arr.map(a =>
     <div key={a.id} className="fp__three-items">
-      <div className="fp__three-item-bubble outter">
-        <div className="fp__three-item-bubble inner">
-          <img src={a.img} alt="showing"/>
+      <div className="fp__three-items">
+        <div className="fp__three-item-bubble outter">
+          <div className="fp__three-item-bubble inner">
+            <img src={a.img} alt="showing"/>
+          </div>
         </div>
       </div>
       <div className="description">

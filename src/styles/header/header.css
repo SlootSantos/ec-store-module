@@ -29,7 +29,6 @@
     left: 50px; }
     .header__nav.left .phone_number {
       color: yellow; }
-
-@media screen and (max-width: 767px) {
-  .left, .right {
-    display: none; } }
+  @media screen and (max-width: 767px) {
+    .header__nav.left, .header__nav.right {
+      display: none; } }

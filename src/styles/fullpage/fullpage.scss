@@ -30,6 +30,7 @@ $primaryColor10: rgba(72,45,42,.1);
 
     @media screen and (max-width: $break-medium) {
       min-height: 300px;
+      height: 100vh;
 
       img {
         height: 300px;
@@ -153,6 +154,22 @@ $primaryColor10: rgba(72,45,42,.1);
               height: 100%;
               border-radius: 50%;
             }
+          }
+        }
+      }
+
+      @media screen and (max-width: $break-medium) {
+        .fp__three-items {
+          display: grid;
+          flex-basis: 100%;
+          text-align: center;
+
+          padding: 20px 0;
+
+
+          .description {
+            width: 90%;
+            padding-left: 5%;
           }
         }
       }

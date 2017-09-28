@@ -54,10 +54,9 @@ $break-large: 1200px;
       color: yellow;
     }
   }
-}
-
-@media screen and (max-width: $break-medium) {
-  .left, .right  {
-    display: none;
+  @media screen and (max-width: $break-medium) {
+    &.left, &.right  {
+      display: none;
+    }
   }
 }
