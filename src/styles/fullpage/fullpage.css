@@ -50,24 +50,39 @@
     text-align: left; }
 
 .full_page.fp__three {
-  background: aliceblue; }
+  min-height: fit-content;
+  display: grid;
+  text-align: center;
+  background: #c6c8ca; }
   .full_page.fp__three .fp__three-item-wrapper {
-    display: inline-flex;
+    display: flex;
+    flex-flow: row wrap;
     text-align: center; }
-    .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble {
+    .full_page.fp__three .fp__three-item-wrapper .fp__three-items {
+      flex: 1;
+      flex-basis: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 50%; }
-      .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble.outter {
-        height: 120px;
-        width: 120px;
-        margin: 10px;
-        border: 2px solid #999; }
-      .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble.inner {
-        width: 110px;
-        height: 110px; }
-        .full_page.fp__three .fp__three-item-wrapper .fp__three-item-bubble.inner img {
-          width: 100%;
-          height: 100%;
-          border-radius: 55px; }
+      padding: 100px 0; }
+      .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description {
+        width: 50%; }
+        .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h1, .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h4 {
+          margin: 0; }
+      .full_page.fp__three .fp__three-item-wrapper .fp__three-items .fp__three-item-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; }
+        .full_page.fp__three .fp__three-item-wrapper .fp__three-items .fp__three-item-bubble.outter {
+          height: 150px;
+          width: 150px;
+          margin: 10px;
+          border: 2px solid #999; }
+        .full_page.fp__three .fp__three-item-wrapper .fp__three-items .fp__three-item-bubble.inner {
+          width: 140px;
+          height: 140px; }
+          .full_page.fp__three .fp__three-item-wrapper .fp__three-items .fp__three-item-bubble.inner img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; }

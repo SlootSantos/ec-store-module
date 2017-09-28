@@ -2,17 +2,20 @@ import React from 'react';
 
 import '../styles/footer/footer.css';
 
+import Logo from '../assets/vo_coffee_logo_white.svg';
+
 
 function Footer() {
   return (
     <div className="footer">
-      <div>
-        <h1>FOOT 1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, dolorum quas explicabo aspernatur esse quidem, corporis quam minus amet voluptatum beatae saepe officiis fugit ut quae sapiente eaque eum at.</p>
+      <div className="image">
+        <img src={ Logo } alt=""/>
       </div>
-      <div>
-        <h1>FOOT 2</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, dolorum quas explicabo aspernatur esse quidem, corporis quam minus amet voluptatum beatae saepe officiis fugit ut quae sapiente eaque eum at.</p>
+      <div className="content">
+        <h1>V|O Trading UG</h1>
+        <b>Petra Vo</b><br/><br/>
+        <span>Mobil: +49 160 94446382</span><br/>
+        <span><a href="mailto:info@vo-coffee.de">Mail: info@vo-coffee.de</a></span>
       </div>
     </div>
   )

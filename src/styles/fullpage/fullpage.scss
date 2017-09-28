@@ -99,36 +99,60 @@ $primaryColor10: rgba(72,45,42,.1);
 
 
   &.fp__three {
-    background: aliceblue;
+    min-height: fit-content;
+    display: grid;
+    text-align: center;
+
+    background: #c6c8ca;
 
     .fp__three-item-wrapper {
-      display: inline-flex;
+      display: flex;
+      flex-flow: row wrap;
       text-align: center;
 
-      .fp__three-item-bubble {
+      .fp__three-items {
+
+        flex: 1;
+        flex-basis: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        border-radius: 50%;
+        padding: 100px 0;
 
+        .description {
+          width: 50%;
 
-        &.outter {
-          height: 120px;
-          width: 120px;
-          margin: 10px;
-
-          border: 2px solid #999;
+          h1, h4 {
+            margin: 0;
+          }
         }
 
-        &.inner {
-          width: 110px;
-          height: 110px;
+        .fp__three-item-bubble {
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          img {
-            width: 100%;
-            height: 100%;
-            border-radius: 55px;
+          border-radius: 50%;
+
+
+          &.outter {
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+
+            border: 2px solid #999;
+          }
+
+          &.inner {
+            width: 140px;
+            height: 140px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
           }
         }
       }

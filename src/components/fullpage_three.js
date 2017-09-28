@@ -13,7 +13,7 @@ import '../styles/fullpage/fullpage.css';
 function FullPageThree() {
   return(
     <div className="full_page fp__three">
-      <h2>Unser Team</h2>
+      <h1>Die V | O Crew</h1>
       <div className="fp__three-item-wrapper">
         { renderTeamBubbles() }
       </div>
@@ -25,35 +25,52 @@ function FullPageThree() {
 function renderTeamBubbles() {
   let arr = [
     {
-      img: ImgLeo,
+      img: ImgPetra,
+      name: 'Petra',
+      desc: 'The Chaperone',
       id: 1
     },
+    // {
+    //   img: ImgLuc,
+    //   name: 'Lucina',
+    //   desc: 'The Chaperone',
+    //   id: 2
+    // },
     {
-      img: ImgLuc,
-      id: 2
-    },
-    {
-      img: ImgPetra,
+      img: ImgLeo,
+      name: 'Leo',
+      desc: 'The Accountant',
       id: 3
     },
     {
       img: ImgPhil,
+      name: 'Philipp',
+      desc: 'The Creator',
       id: 4
     },
     {
       img: ImgFlo,
+      name: 'Flo',
+      desc: 'The Nerd',
       id: 5
     }
   ];
   // TODO: FIX TEXT ALIGNMENT INSIDE OF BUBBLE
   return arr.map(a =>
-    <div key={a.id}>
+    <div key={a.id} className="fp__three-items">
       <div className="fp__three-item-bubble outter">
         <div className="fp__three-item-bubble inner">
           <img src={a.img} alt="showing"/>
         </div>
       </div>
-      { a.id }
+      <div className="description">
+        <h1>{ a.name }</h1>
+        <h4>{ a.desc }</h4>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dignissimos odio laborum expedita rem, unde at sequi, quibusdam dicta, error ducimus distinctio asperiores, harum non! Consectetur, illo. Amet, nesciunt, asperiores!
+        </p>
+      </div>
     </div>
   );
 };

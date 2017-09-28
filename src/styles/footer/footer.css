@@ -9,9 +9,14 @@
   color: white; }
   .footer div {
     width: 50%; }
-    .footer div h1 {
-      width: 60%;
-      padding-left: 20%; }
-    .footer div p {
+    .footer div.image {
+      height: 80%;
+      text-align: center; }
+      .footer div.image img {
+        max-height: 100%; }
+    .footer div.content a {
+      text-decoration: none;
+      color: grey; }
+    .footer div.content h1, .footer div.content span, .footer div.content b {
       width: 60%;
       padding-left: 20%; }

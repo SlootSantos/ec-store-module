@@ -14,14 +14,26 @@
   div {
     width: 50%;
 
-    h1 {
-      width: 60%;
-      padding-left: 20%;
+    &.image {
+      height: 80%;
+      text-align: center;
+
+      img {
+        max-height: 100%;
+      }
     }
 
-    p {
-      width: 60%;
-      padding-left: 20%
+    &.content {
+
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+
+      h1, span, b {
+        width: 60%;
+        padding-left: 20%;
+      }
     }
   }
 }
