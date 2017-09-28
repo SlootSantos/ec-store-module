@@ -4,11 +4,19 @@ export const ADD_CART = 'ADD_CART';
 
 
 // export fetch products function
-export function addToCart(prodId) {
-  const request = sdk.addToCart(prodId);
+export async function addToCart(prodId, quantity) {
+  console.log(quantity);
+  let request;
 
-  return {
-    type: ADD_CART,
-    payload: request
+  try {
+    request = await sdk.addToCart(prodId, quantity);
+  } catch (e) {
+    request = e;
+  } finally {
+
+    return {
+      type: ADD_CART,
+      payload: request
+    }
   }
 }

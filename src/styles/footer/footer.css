@@ -9,5 +9,9 @@
   color: white; }
   .footer div {
     width: 50%; }
+    .footer div h1 {
+      width: 60%;
+      padding-left: 20%; }
     .footer div p {
-      width: 60%; }
+      width: 60%;
+      padding-left: 20%; }

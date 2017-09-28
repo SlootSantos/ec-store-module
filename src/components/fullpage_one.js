@@ -8,7 +8,9 @@ import Logo from '../assets/vo_coffee_logo_white.svg';
 function FullpageOne() {
   return(
     <div className="full_page fp__one">
-      <img src={Logo} alt="V|O COFFEE"/>
+      <div className="fp__one-layer">
+        <img src={Logo} alt="V|O COFFEE"/>
+      </div>
     </div>
   );
 };

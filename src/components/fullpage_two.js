@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/fullpage/fullpage.css';
+import '../styles/button/button.css';
 
 
 function prodDescription(products) {
+
   return products
   .map(prod =>
       <div key={prod.name} className="fp__two-item">
@@ -14,7 +17,11 @@ function prodDescription(products) {
         <div className="item-text-wrap">
           <h1>{ prod.name }</h1>
           <div className="fp__two-item-description">
-            <p>{ prod.description }</p>
+            <p>
+              { prod.description }
+
+              <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Moon Me!</Link>
+            </p>
           </div>
         </div>
       </div>

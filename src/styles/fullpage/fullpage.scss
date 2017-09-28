@@ -1,13 +1,28 @@
 $break-small: 400px;
 $break-medium: 767px;
 $break-large: 1200px;
-$primaryColor: #482d2a;
+$primaryColor: rgba(72,45,42,1);
+$primaryColor50: rgba(72,45,42,.5);
+$primaryColor10: rgba(72,45,42,.1);
 
 .full_page {
 
   &.fp__one {
     height: 600px;
-    background: $primaryColor;
+    background: url('../../assets/header.img.webp');
+    background-size: cover;
+    background-position: center;
+
+    .fp__one-layer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+
+      background: rgba(1,1,1,.5);
+    }
 
     img {
       height: 500px;
@@ -40,6 +55,12 @@ $primaryColor: #482d2a;
         p {
           color: $primaryColor;
           width: 50%;
+
+          display: inline-grid;
+
+          a {
+            margin-top: 10px;
+          }
         }
       }
 
@@ -82,6 +103,7 @@ $primaryColor: #482d2a;
 
     .fp__three-item-wrapper {
       display: inline-flex;
+      text-align: center;
 
       .fp__three-item-bubble {
         display: flex;
@@ -100,8 +122,14 @@ $primaryColor: #482d2a;
         }
 
         &.inner {
-          width: 100px;
-          height: 100px;
+          width: 110px;
+          height: 110px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 55px;
+          }
         }
       }
     }
