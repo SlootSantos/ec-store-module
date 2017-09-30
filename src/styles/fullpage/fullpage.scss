@@ -162,7 +162,7 @@ $secondaryColor: #c6c8ca;
         }
       }
 
-      @media screen and (max-width: $break-large) {
+      @media screen and (max-width: $break-large) and (min-width: $break-medium) {
         .fp__two-item-image {
           max-height: 300px;
         }

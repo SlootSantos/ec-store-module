@@ -89,7 +89,7 @@
             width: 100%; }
         .full_page.fp__two .fp__two-item .fp__two-item-image {
           max-height: 200px; } }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1200px) and (min-width: 767px) {
       .full_page.fp__two .fp__two-item .fp__two-item-image {
         max-height: 300px; }
       .full_page.fp__two .fp__two-item .item-text-wrap, .full_page.fp__two .fp__two-item .item-image-wrap {
