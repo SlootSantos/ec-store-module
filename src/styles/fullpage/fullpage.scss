@@ -98,7 +98,7 @@ $secondaryColor: #c6c8ca;
 
       .fp__two-item-description {
         p {
-          color: $primaryColor;
+          color: black;
           width: 50%;
 
           display: inline-grid;
@@ -188,6 +188,7 @@ $secondaryColor: #c6c8ca;
     background: $secondaryColor;
 
     .fp__three-headline {
+      padding: 20px 0;
       h1 {
         margin-bottom: 0;
       }

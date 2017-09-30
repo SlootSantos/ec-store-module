@@ -13,3 +13,9 @@ body {
 .switch_content {
   padding-top: 50px;
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    font-weight: normal;
+  }
+}

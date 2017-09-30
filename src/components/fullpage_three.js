@@ -39,29 +39,23 @@ function renderTeamBubbles() {
       desc: 'The Chaperone',
       id: 1
     },
-    // {
-    //   img: ImgLuc,
-    //   name: 'Lucina',
-    //   desc: 'The Chaperone',
-    //   id: 2
-    // },
     {
       img: ImgLeo,
       name: 'Leo',
       desc: 'The Accountant',
-      id: 3
+      id: 2
     },
     {
       img: ImgPhil,
       name: 'Philipp',
       desc: 'The Creator',
-      id: 4
+      id: 3
     },
     {
       img: ImgFlo,
       name: 'Flo',
       desc: 'The Nerd',
-      id: 5
+      id: 4
     }
   ];
 
