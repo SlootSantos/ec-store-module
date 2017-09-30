@@ -16,10 +16,12 @@ function prodDescription(products) {
 
         <div className="item-text-wrap">
           <h1>{ prod.name }</h1>
+          <b>{ prod.price }</b>
+          
           <div className="fp__two-item-description">
             <p>
               { prod.description }
-              { prod.bullets.map(bull => <span className="fp__two-bullet" key={bull}>{bull}</span>) }
+              { prod.bullets.map(bull => <span className="fp__two-bullet" key={bull}>{ bull }</span>) }
               <span className="btn-wrapper">
                 {/* <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Bestellen!</Link> */}
                 <a className="btn btn-primary"

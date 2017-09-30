@@ -23,10 +23,10 @@
   padding: 12px 32px; }
   .btn:active, .btn:hover {
     color: white;
-    background: #482d2a; }
+    background: #c6c8ca; }
   .btn.btn-secondary {
     background-color: #482d2a;
     color: white; }
     .btn.btn-secondary:hover {
       background-color: white;
-      color: #482d2a; }
+      color: #c6c8ca; }

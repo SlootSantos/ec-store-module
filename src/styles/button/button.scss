@@ -2,6 +2,7 @@ $primaryColor: rgba(72,45,42,1);
 $primaryColor80: rgba(72,45,42,.8);
 $primaryColor50: rgba(72,45,42,.5);
 $primaryColor10: rgba(72,45,42,.1);
+$secondaryColor: #c6c8ca;
 
 .btn {
   cursor: pointer;
@@ -32,7 +33,7 @@ $primaryColor10: rgba(72,45,42,.1);
 
   &:active, &:hover {
     color: white;
-    background: $primaryColor;
+    background: $secondaryColor;
   }
 
   &.btn-primary {
@@ -45,7 +46,7 @@ $primaryColor10: rgba(72,45,42,.1);
 
     &:hover {
       background-color: white;
-      color: $primaryColor;
+      color: $secondaryColor;
     }
   }
 }

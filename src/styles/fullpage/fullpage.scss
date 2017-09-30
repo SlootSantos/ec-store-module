@@ -4,6 +4,7 @@ $break-large: 1200px;
 $primaryColor: rgba(72,45,42,1);
 $primaryColor50: rgba(72,45,42,.5);
 $primaryColor10: rgba(72,45,42,.1);
+$secondaryColor: #c6c8ca;
 
 .full_page {
 
@@ -39,7 +40,50 @@ $primaryColor10: rgba(72,45,42,.1);
   }
 
 
+
+  &.fp__mantra {
+    display: block;
+    min-height: 0;
+    width: 80%;
+    left: 10%;
+
+    text-align: center;
+    background: $secondaryColor;
+
+    .mantra-wrapper {
+      width: 50%;
+      padding: 50px 25%;
+
+      .mantra-bullets {
+        text-align: left;
+        margin-top: 100px;
+      }
+
+      .social-icons {
+        margin: 100px 0;
+        background: black;
+
+        img {
+          cursor: pointer;
+          padding: 15px 25px;
+          height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $break-large) {
+      .mantra-wrapper {
+        width: 90%;
+        padding-left: 5%;
+      }
+    }
+  }
+
+
   &.fp__two {
+    display: block;
+    text-align: center;
+
     .fp__two-item {
       display: flex;
       align-items: center;
@@ -141,7 +185,28 @@ $primaryColor10: rgba(72,45,42,.1);
     display: grid;
     text-align: center;
 
-    background: #c6c8ca;
+    background: $secondaryColor;
+
+    .fp__three-headline {
+      h1 {
+        margin-bottom: 0;
+      }
+
+      h4 {
+        margin-top: 0;
+      }
+    }
+
+    .fp__three-introduction {
+      width: 90%;
+      padding-left: 5%;
+
+
+      @media screen and (min-width: $break-large) {
+        width: 60%;
+        padding-left: 20%;
+      }
+    }
 
     .fp__three-item-wrapper {
       display: flex;
@@ -149,7 +214,6 @@ $primaryColor10: rgba(72,45,42,.1);
       text-align: center;
 
       .fp__three-items {
-
         flex: 1;
         flex-basis: 50%;
         display: flex;
@@ -205,14 +269,38 @@ $primaryColor10: rgba(72,45,42,.1);
 
 
           .description {
-            width: 90%;
-            padding-left: 5%;
+            width: 70%;
+            padding-left: 15%;
           }
         }
       }
 
       @media screen and (min-width: $break-large) {
         width: 90%;
+        padding-left: 5%;
+
+        .fp__three-items {
+          &:nth-child(even) {
+            .fp__three-items {
+              order: 2;
+            }
+
+            .description {
+              order: 1;
+              padding-left: 30px;
+            }
+          }
+
+          &:nth-child(odd) {
+            .fp__three-items {
+              order: 1;
+            }
+            .description {
+              order: 2;
+              padding-right: 30px;
+            }
+          }
+        }
       }
     }
   }

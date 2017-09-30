@@ -13,7 +13,16 @@ import '../styles/fullpage/fullpage.css';
 function FullPageThree() {
   return(
     <div className="full_page fp__three">
-      <h1>V | O Crew</h1>
+      <div className="fp__three-headline">
+        <h1>V | O Crew</h1>
+        <h4>Wir &lt;3 Kaffee</h4>
+      </div>
+      <div className="fp__three-introduction">
+        <p>
+          <b>V|O Coffee</b> wurde im Sommer 2016 von Petra gegründet. Als einer der ersten Online-Anbieter für vietnamesischen Kaffee in Deutschland wollen wir unsere Liebe für Kaffee mit euch teilen und die Kaffeekultur in Deutschland bereichern.<br/><br/>
+          Seit der Gründung sind wir als Team gewachsen und arbeiten im Kernteam zu viert an dem Start-Up. Erste Erfolge konnten wir auch schon verzeichnen. Denn bei dem Rhein-Neckar-Start-Up-Weekend konnten wir uns den 3. Platz sichern und haben schon bei diversen Marketing-Events unseren Kaffee erfolgreich angeboten. Dabei wollen wir es natürlich nicht belassen, sondern noch viel mehr erreichen!
+        </p>
+      </div>
       <div className="fp__three-item-wrapper">
         { renderTeamBubbles() }
       </div>
