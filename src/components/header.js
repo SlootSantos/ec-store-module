@@ -26,10 +26,14 @@ function Header() {
 function renderIcons() {
   return (
     <div className="social-icons">
-      <img src={facebook} alt=""/>
-      <img src={instagram} alt=""/>
+      <img onClick={ () => goToSocialMedia('https://facebook.com/vocoffeede') } src={facebook} alt=""/>
+      <img onClick={ () => goToSocialMedia('https://www.instagram.com/vo.coffee') } src={instagram} alt=""/>
     </div>
   )
+};
+
+function goToSocialMedia(link) {
+  window.open(link);
 };
 
 

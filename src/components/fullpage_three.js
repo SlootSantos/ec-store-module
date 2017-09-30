@@ -13,7 +13,7 @@ import '../styles/fullpage/fullpage.css';
 function FullPageThree() {
   return(
     <div className="full_page fp__three">
-      <h1>Die V | O Crew</h1>
+      <h1>V | O Crew</h1>
       <div className="fp__three-item-wrapper">
         { renderTeamBubbles() }
       </div>
@@ -55,7 +55,8 @@ function renderTeamBubbles() {
       id: 5
     }
   ];
-  // TODO: FIX TEXT ALIGNMENT INSIDE OF BUBBLE
+
+
   return arr.map(a =>
     <div key={a.id} className="fp__three-items">
       <div className="fp__three-items">

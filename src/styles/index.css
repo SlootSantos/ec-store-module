@@ -6,6 +6,8 @@ body {
   font-size: small;
   letter-spacing: .2em;
   font-weight: 100;
+
+  overflow-x: hidden;
 }
 
 .switch_content {
