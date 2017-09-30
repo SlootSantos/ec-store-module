@@ -59,7 +59,7 @@
       color: black;
       width: 50%;
       display: inline-grid; }
-      .full_page.fp__two .fp__two-item .fp__two-item-description p .fp__two-bullet:nth-child(1) {
+      .full_page.fp__two .fp__two-item .fp__two-item-description p .fp__two-bullet:nth-child(2) {
         padding-top: 20px; }
       .full_page.fp__two .fp__two-item .fp__two-item-description p .btn-wrapper {
         padding: 20px 0; }
