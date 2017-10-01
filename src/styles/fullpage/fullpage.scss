@@ -61,7 +61,7 @@ $secondaryColor: #c6c8ca;
 
       .social-icons {
         margin: 100px 0;
-        background: black;
+        background: #373737;
 
         img {
           cursor: pointer;
@@ -93,12 +93,13 @@ $secondaryColor: #c6c8ca;
         width: 50%;
       }
       .fp__two-item-image {
-        max-height: 400px;
+        width: 70%;
+        max-height: 300px;
       }
 
       .fp__two-item-description {
         p {
-          color: black;
+          color: #373737;
           width: 50%;
 
           display: inline-grid;

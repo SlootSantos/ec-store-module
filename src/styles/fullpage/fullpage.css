@@ -34,7 +34,7 @@
       margin-top: 100px; }
     .full_page.fp__mantra .mantra-wrapper .social-icons {
       margin: 100px 0;
-      background: black; }
+      background: #373737; }
       .full_page.fp__mantra .mantra-wrapper .social-icons img {
         cursor: pointer;
         padding: 15px 25px;
@@ -54,9 +54,10 @@
     .full_page.fp__two .fp__two-item .item-text-wrap, .full_page.fp__two .fp__two-item .item-image-wrap {
       width: 50%; }
     .full_page.fp__two .fp__two-item .fp__two-item-image {
-      max-height: 400px; }
+      width: 70%;
+      max-height: 300px; }
     .full_page.fp__two .fp__two-item .fp__two-item-description p {
-      color: black;
+      color: #373737;
       width: 50%;
       display: inline-grid; }
       .full_page.fp__two .fp__two-item .fp__two-item-description p .fp__two-bullet:nth-child(2) {

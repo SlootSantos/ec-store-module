@@ -10,7 +10,7 @@ function FullPageMantra() {
       <div className="mantra-wrapper">
         <p>
           <b>
-            Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und experience „Vietnam In A Cup“. <br/><br/>
+            Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. <br/><br/>
             Für Updates folge uns auf unseren Social Media Kanälen und sei live dabei, wie wir wachsen und die Kaffeekultur verändern!
           </b>
 
@@ -21,6 +21,9 @@ function FullPageMantra() {
           <h2>Warum V|O ?</h2>
           <ul>
             <li>
+              Neue Lifestyle experience aus Vietnam
+            </li>
+            <li>
               Authentischer und traditionell vietnamesischer Kaffee
             </li>
             <li>
@@ -28,9 +31,6 @@ function FullPageMantra() {
             </li>
             <li>
               Hohe Qualität
-            </li>
-            <li>
-              Unterstützung von sozialen Projekten
             </li>
             <li>
               Andere Kaffeealternative
