@@ -2,10 +2,9 @@ language: node_js
 node_js:
 - '8'
 before_install:
-  - yarn clean
-  - rm .yarnclean
-  - yarn add https://github.com/SlootSantos/ec-JS-SDK.git
-
+- yarn clean
+- rm .yarnclean
+- yarn add https://github.com/SlootSantos/ec-JS-SDK.git
 before_script:
 - npm rebuild node-sass
 - yarn build
@@ -15,13 +14,14 @@ before_script:
 - cd $STAT/js && for foo in *.js.gz; do mv $foo `basename $foo .js.gz`.js; done
 - cd ../css && for foo in *.css.gz; do mv $foo `basename $foo .css.gz`.css; done
 - cd ../../../
-
 notifications:
   email:
     recipients:
     - sloot@slootdev.com
     on_success: always
     on_failure: always
+  slack:
+    secure: EI6e9gbSWDKRh7XU/tQPPiCqJtp6vZdWkIr3FBd/pwUjq6pCMptfuZ6TbuLjj++DaKeTyA0UtPG02zGf01I4lpZT6igFWx33Z+eixKQiULJpuJSEOSI4NGT0uvvzUr2SQ2DU5zx3JWlgVxwNldbqRtg0CLLZ8gcEviTfTdRs8e0VypBKwm/93f4gH1jO9oiscaoWFBInIDIEFR6dpQboN03DqNdW/s5LujDP80O06s6c/FCDyl6U3F27pWfFq+xrbtFtoIfZQWe3H9eM8ihhRsykNpJeoM52qopJKpGd5+Ls17W85VddUOFCiK5GpPJQemZlr+oRtiXZKxABlvF+L8XsbDmPE4630vZHyyGRgY2xFX3dGr2fLrSuKpnAKxwP779ZGcbi+/qxfQNwOnei5JqkhdDWYd4qcz0qhse4nxgzq5eN/3gjOF5+i6HlJ8M/mEqfwtNfxwNZGh+mKQ8CDf1en5VxrvW7i0s7r8R2A/NL/4GXhZ8YjnVonLCsKdCQJ1wd5KwO+ZU9Y6Qd06E9qqW2LxROhKI7fxuvRUaoIpRA+Hahzgrl99BIz2NOC/NPiR4XvJIztf1B94RRgOP4PNHDK/llSocQ7RV8tBefEcs7K5kE1N7LeBSiWDzGYtzTlYKCA1GZjX3ge0cHCeBT+ncRQNb65/UvDKyN/ZuBwFY=
 deploy:
   provider: s3
   region: eu-central-1
