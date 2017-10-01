@@ -4,7 +4,7 @@ $break-large: 1200px;
 $primaryColor: rgba(72,45,42,1);
 $primaryColor50: rgba(72,45,42,.5);
 $primaryColor10: rgba(72,45,42,.1);
-$secondaryColor: #c6c8ca;
+$secondaryColor: #373737;
 
 .full_page {
 
@@ -42,6 +42,7 @@ $secondaryColor: #c6c8ca;
 
 
   &.fp__mantra {
+    color: white;
     display: block;
     min-height: 0;
     width: 80%;
@@ -83,6 +84,11 @@ $secondaryColor: #c6c8ca;
   &.fp__two {
     display: block;
     text-align: center;
+
+    .disclaimer {
+      padding: 50px 0;
+      font-size: x-small;
+    }
 
     .fp__two-item {
       display: flex;
@@ -187,6 +193,7 @@ $secondaryColor: #c6c8ca;
     text-align: center;
 
     background: $secondaryColor;
+    color: white;
 
     .fp__three-headline {
       padding: 20px 0;

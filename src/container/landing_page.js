@@ -11,7 +11,7 @@ import FullPageMantra from '../components/fullpage_mantra';
 
 import Espresso from '../assets/Espresso.svg';
 import Classic from '../assets/CaPhePhin.svg';
-import Filter from '../assets/viet.Filter.svg';
+import Filter from '../assets/FrenchPress.svg';
 
 
 import '../styles/landingpage/landing_page.css';

@@ -17,7 +17,7 @@ function Header() {
         <img src={Logo} alt=""/>
       </div>
       <div className="header__nav right">
-        <span className="opening_time">Mo - Fr: 08:00 - 18:00</span> | { renderIcons() }
+         { renderIcons() }
       </div>
     </div>
   )

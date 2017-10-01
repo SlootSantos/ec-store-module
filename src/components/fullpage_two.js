@@ -22,7 +22,7 @@ function prodDescription(products) {
             <p>
               {/* TODO: GOOD LORD CHANGE THIS ASAP! */}
               <span dangerouslySetInnerHTML={{__html: prod.description}}></span>
-              
+
               { prod.bullets.map(bull => <span className="fp__two-bullet" key={bull}>{ bull }</span>) }
               <span className="btn-wrapper">
                 {/* <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Bestellen!</Link> */}
@@ -44,6 +44,11 @@ function FullPageTwo(props) {
     <div className="full_page fp__two">
       <div className="item-wrapper">
         { prodDescription(products) }
+      </div>
+      <div className="disclaimer">
+        <b>*</b>Jeweils 250g verfügbar <b>gemahlen</b> oder in <b>Bohnen</b> <br/>
+        Preise zzgl. €4,99 Versand <br/>
+        <b>Zahlbar per PayPal oder Vorkasse</b>
       </div>
     </div>
   );
