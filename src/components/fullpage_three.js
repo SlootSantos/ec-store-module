@@ -1,10 +1,14 @@
 import React from 'react';
 
-import ImgLeo from '../assets/leo_web.webp';
-// import ImgLuc from '../assets/lucina_web.webp';
-import ImgPetra from '../assets/petra_web.webp';
-import ImgPhil from '../assets/philipp_web.webp';
-import ImgFlo from '../assets/flo_square.webp';
+import ImgLeo from '../assets/leo_web.png';
+import ImgPetra from '../assets/petra_web.png';
+import ImgPhil from '../assets/philipp_web.png';
+import ImgFlo from '../assets/flo_square.png';
+
+import ImgLeo1 from '../assets/leo_web(1).png';
+import ImgPetra1 from '../assets/petra_web(1).png';
+import ImgPhil1 from '../assets/philipp_web(1).png';
+import ImgFlo1 from '../assets/flo_square(1).png';
 
 import '../styles/fullpage/fullpage.css';
 
@@ -32,30 +36,32 @@ function FullPageThree() {
 
 
 function renderTeamBubbles() {
+  let isSafari = (navigator.userAgent.indexOf("Safari") != -1);
+
   let arr = [
     {
-      img: ImgPetra,
+      img: isSafari ? ImgPetra1 : ImgPetra,
       name: 'Petra',
       desc: 'The Chaperone',
       intro: 'Petra ist die Gründerin von V|O Coffee. Bereits vor ihrer Gründung war sie selbstständig und hat neben ihrem Englisch und BWL Studium an der Uni Mannheim viel im Sales und Merchandising Bereich gearbeitet. Als zertifizierte Barista ist ihr die Qualität bei Kaffee besonders wichtig. <br />Mit <b>V|O Coffee</b> kann sie nun ihre Kaffeeliebe und ein Stück ihrer vietnamesischen Kultur mit euch teilen.',
       id: 1
     },
     {
-      img: ImgLeo,
+      img: isSafari ? ImgLeo1 : ImgLeo,
       name: 'Leo',
       desc: 'The Accountant',
       intro: 'Wenn es um kaufmännische Entscheidungen geht, dann ist Leo unser Mann. Vor V|O Coffee hat er Akkreditivgeschäfte der BASF am Standort Hong Kong betreut und studiert jetzt Unternehmensjura an der Uni Mannheim.<br />Bei <b>V|O Coffee</b> ist er dabei, weil er an das Produkt glaubt und Petras Leidenschaft zu V|O ihn überzeugt hat.',
       id: 2
     },
     {
-      img: ImgPhil,
+      img: isSafari ? ImgPhil1 : ImgPhil,
       name: 'Philipp',
       desc: 'The Creator',
       intro: 'Philipp ist der Kreative bei V|O und arbeitet als digitaler Mediendesigner in einer Werbeagentur. Durch sein Ehrenamt hat er ein Jahr in Vietnam gelebt, wo er das erste Mal den vietnamesischen Kaffee kennenlernte. <br />Durch <b>V|O Coffee</b> möchte er daran mitwirken, diesen auch in Deutschland bekannter zu machen und die Kaffeelandschaft zu bereichern.',
       id: 3
     },
     {
-      img: ImgFlo,
+      img: isSafari ? ImgFlo1 : ImgFlo,
       name: 'Flo',
       desc: 'The Nerd',
       intro: 'Flo ist unser IT-Guru. Schon in jungen Jahren hat er sich für das Coding interessiert. Heute arbeitet er als Freelancer im Software Engineering und hat u.a. bei Volkswagen, E.ON und AboutYou gearbeitet. Wie jeder andere Nerd auch ist Flo ein Kaffeetrinker. <br />Bei <b>V|O Coffee</b> kann er seine zwei größten Lieben vereinen.',

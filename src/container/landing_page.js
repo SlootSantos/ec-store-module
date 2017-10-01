@@ -21,7 +21,7 @@ class LandingPage extends Component {
   render() {
     let mockData = [
       {
-        name: 'Cà Phe Phin',
+        name: 'Cà Phê Phin',
         id: 'ed0ee098-d5ba-409d-b2f4-c9610feca4b4',
         imgSrc: Classic,
         description: 'Der <b>traditionell vietnamesische Kaffee</b> zeichnet sich durch seine sehr starke Röstung aus, die dem Kaffee einen sehr kräftigen Geschmack geben. Traditionell wird er mit gesüßter Kondensmilch auf Eis serviert, die die starke Röstung ausbalanciert und die Schokonoten der Bohnen hervorheben und den Kaffee cremig machen.',
