@@ -36,7 +36,7 @@ function FullPageThree() {
 
 
 function renderTeamBubbles() {
-  let isSafari = (navigator.userAgent.indexOf("Safari") != -1);
+  let isSafari = (navigator.userAgent.indexOf("Safari") !== -1);
 
   let arr = [
     {
