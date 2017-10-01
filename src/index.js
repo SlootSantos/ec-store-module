@@ -8,13 +8,19 @@ import ReduxPromise from 'redux-promise';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import LandingPage from './container/landing_page';
 // import App from './container/App';
-import ComingSoon from './components/coming_soon';
+import LandingPage from './container/landing_page';
+import Impressum from './container/impressum';
+// import ProductPage from './container/product_page';
+// import CheckoutPage from './container/checkout_page';
+// import Cart from './container/cart';
+// import header && footer
+import Header from './components/header';
+import Footer from './components/footer';
 
 import reducers from './reducers/index';
 
-import './config/sdk_config'
+import './config/sdk_config';
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -24,10 +30,20 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-        <Switch>
-          <Route path="/land" component={ LandingPage }></Route>
-          <Route path="/" component={ ComingSoon }></Route>
-        </Switch>
+        <Header></Header>
+
+        <div className="switch_content">
+          <Switch>
+            {/* <Route path="/shop/checkout" component={ CheckoutPage }></Route>
+            <Route path="/shop/cart" component={ Cart }></Route>
+            <Route path="/shop/:product-:id" component={ ProductPage }></Route> */}
+            <Route path="/impressum" component={ Impressum }></Route>
+            <Route path="/" component={ LandingPage }></Route>
+          </Switch>
+        </div>
+
+
+        <Footer></Footer>
       </div>
     </BrowserRouter>
   </Provider>,

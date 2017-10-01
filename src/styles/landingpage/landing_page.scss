@@ -1,0 +1,13 @@
+.main_container {
+  background: white;
+}
+
+.full_page {
+  min-height: 100vh;
+  min-width: 100vw;
+
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

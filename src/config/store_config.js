@@ -1,5 +1,5 @@
-const STORE_ID = '1352f9a6500079ff3e9b47ad13332ed8';
-const API_URL  = process.env.API_URL || 'http://a.localhost:8000';
+const STORE_ID = 'f48bc379d134c584f236f527c39bc605';
+const API_URL  = process.env.REACT_APP_API_URL || 'https://custom-commerce.de';
 
 export {
   STORE_ID,

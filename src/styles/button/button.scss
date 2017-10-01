@@ -1,0 +1,52 @@
+$primaryColor: rgba(72,45,42,1);
+$primaryColor80: rgba(72,45,42,.8);
+$primaryColor50: rgba(72,45,42,.5);
+$primaryColor10: rgba(72,45,42,.1);
+$secondaryColor: #c6c8ca;
+
+.btn {
+  cursor: pointer;
+
+  width: fit-content;
+  text-decoration: none;
+  color: #373737;
+  border: 1px solid $primaryColor;
+
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(204, 204, 204);
+
+  font-family: inherit;
+  position: relative;
+  outline: 0;
+  line-height: 21px;
+  letter-spacing: .2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+  -moz-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+  transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+  font-size: 11px;
+  padding: 12px 32px;
+
+  &:active, &:hover {
+    color: white;
+    background: $secondaryColor;
+  }
+
+  &.btn-primary {
+
+  }
+
+  &.btn-secondary {
+    background-color: $primaryColor;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $secondaryColor;
+    }
+  }
+}

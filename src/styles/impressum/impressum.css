@@ -1,0 +1,10 @@
+.impressum {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .impressum div {
+    width: 50%;
+    padding: 0 30px; }
+    .impressum div:nth-child(2) p {
+      width: 80%; }

@@ -1,0 +1,13 @@
+.checkout {
+  height: 100vh; }
+  .checkout.content {
+    display: flex; }
+    .checkout.content form {
+      display: flex;
+      flex-flow: row wrap;
+      width: 50%; }
+      .checkout.content form input {
+        width: 50%;
+        box-sizing: border-box;
+        flex: 1;
+        flex-basis: 50%; }

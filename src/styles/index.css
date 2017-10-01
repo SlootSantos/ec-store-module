@@ -2,4 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  font-size: small;
+  letter-spacing: .2em;
+  font-weight: 100;
+
+  overflow-x: hidden;
+}
+
+.switch_content {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    font-weight: normal;
+  }
 }

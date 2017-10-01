@@ -1,0 +1,62 @@
+$break-small: 400px;
+$break-medium: 767px;
+$break-large: 1200px;
+
+.header {
+  width: 100vw;
+  height: 50px;
+
+  position: fixed;
+  z-index: 999;
+  background: #373737;
+  color: white;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__nav {
+  position: absolute;
+  font-size: x-small;
+  word-spacing: 5px;
+
+  &.logo {
+    img {
+      max-height: 100%;
+      width: 25px;
+    }
+  }
+
+  &.right {
+    right: 50px;
+    display: -webkit-inline-box;
+
+    .opening_time {
+      word-spacing: normal;
+    }
+
+    .social-icons {
+      img {
+        cursor: pointer;
+
+        padding: 0 5px;
+        height: 15px;
+      }
+    }
+  }
+
+  &.left {
+    left: 50px;
+
+    .phone_number {
+      color: yellow;
+    }
+  }
+  @media screen and (max-width: $break-medium) {
+    &.left, &.right  {
+      display: none;
+    }
+  }
+}

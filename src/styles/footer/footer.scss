@@ -1,0 +1,60 @@
+$break-small: 400px;
+$break-medium: 767px;
+$break-large: 1200px;
+$primaryColor: rgba(72,45,42,1);
+$primaryColor50: rgba(72,45,42,.5);
+$primaryColor10: rgba(72,45,42,.1);
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  height: 300px;
+  width: 100%;
+  background: #373737;
+  bottom: 0;
+
+  color: white;
+
+  div {
+    width: 50%;
+
+    &.image {
+      height: 80%;
+      text-align: center;
+
+      img {
+        max-height: 100%;
+      }
+    }
+
+    &.content {
+
+      a {
+        text-decoration: none;
+        color: grey;
+      }
+
+      h1, span, b {
+        width: 60%;
+        padding-left: 20%;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: $break-medium) {
+    img {
+      height: 70%;
+    }
+
+    div.content {
+      h1, span, b {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+}
