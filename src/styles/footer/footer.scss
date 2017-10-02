@@ -17,6 +17,7 @@ $primaryColor10: rgba(72,45,42,.1);
   bottom: 0;
 
   color: white;
+  border-top: 1px solid white;
 
   div {
     width: 50%;
@@ -35,6 +36,12 @@ $primaryColor10: rgba(72,45,42,.1);
       a {
         text-decoration: none;
         color: grey;
+
+        &.link {
+          color: white;
+          font-size: larger;
+          text-decoration: underline;
+        }
       }
 
       h1, span, b {

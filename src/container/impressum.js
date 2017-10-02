@@ -5,6 +5,10 @@ import '../styles/impressum/impressum.css';
 
 class Impressum extends Component {
 
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
+
   render() {
 
     return (
