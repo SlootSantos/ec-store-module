@@ -68,6 +68,9 @@ class Impressum extends Component {
             aufmerksam werden, bitten wir um einen entsprechenden Hinweis.
             Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte
             umgehend entfernen.
+
+            <br/><br/><br/>
+            Icons made by <a href="http://www.freepik.com/">Freepik</a> and <a href="https://www.epicpxls.com/">EpicCoders</a> from www.flaticon.com
           </p>
         </div>
       </div>

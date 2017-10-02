@@ -1,5 +1,5 @@
 .impressum {
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
 
   justify-content: center;
@@ -8,13 +8,21 @@
   div {
     width: 50%;
     padding: 0 30px;
-    &:first-child {
-
-    }
 
     &:nth-child(2) {
       p {
         width: 80%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: block;
+
+    div {
+      width: 100%;
+
+      &:first-child {
+        border-bottom: 1px solid black;
       }
     }
   }
