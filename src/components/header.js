@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className="header">
       <div className="header__nav left">
-        FAQ | Contact | <span className="phone_number">+49 160 94446382</span>
+        Contact | <span className="phone_number">+49 160 94446382</span>
       </div>
       <div className="header__nav logo">
         <img src={Logo} alt=""/>
