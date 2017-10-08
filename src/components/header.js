@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/header/header.css';
 
@@ -14,7 +15,7 @@ function Header() {
         Contact | <span className="phone_number">+49 160 94446382</span>
       </div>
       <div className="header__nav logo">
-        <img src={Logo} alt=""/>
+        <Link to="/"><img src={Logo} alt=""/></Link>
       </div>
       <div className="header__nav right">
          { renderIcons() }

@@ -29,7 +29,7 @@ class LandingPage extends Component {
         price: '€8,90'
       },
       {
-        name: 'Thanh Trùc',
+        name: 'Thanh Trúc',
         id: 'ed0ee098-d5ba-409d-b2f4-c9610feca4b4',
         imgSrc: Filter,
         description: 'Unser <b>Filterkaffee</b> ist ein sortenreiner Kaffee aus 100% Bourbon Bohnen, eine sehr edle Sorte von Arabica Bohnen. Bourbon Bohnen sind bekannt dafür, dass sie eine feine komplexe Säurestruktur haben, die den Kaffee bekömmlich und fein machen.',
