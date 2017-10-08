@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../styles/fullpage/fullpage.css';
 import '../styles/button/button.css';
@@ -25,9 +25,9 @@ function prodDescription(products) {
 
               { prod.bullets.map(bull => <span className="fp__two-bullet" key={bull}>{ bull }</span>) }
               <span className="btn-wrapper">
-                {/* <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Bestellen!</Link> */}
-                <a className="btn btn-primary"
-                  href={`mailto:info@vo-coffee.de?subject=Bestellung ${prod.name}`}>Bestellen!</a>
+                <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Bestellen!</Link>
+                {/* <a className="btn btn-primary"
+                  href={`mailto:info@vo-coffee.de?subject=Bestellung ${prod.name}`}>Bestellen!</a> */}
               </span>
             </p>
           </div>
