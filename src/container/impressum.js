@@ -17,8 +17,8 @@ class Impressum extends Component {
           <p>
             <b>V|O Tading UG </b> <br/>
             (haftungsbeschränkt) <br/>
-            Schneidweg 4<br/>
-            59590 Geseke<br/><br/><br/>
+            Rheinhäuserstr.12<br/>
+            68165 Mannheim<br/><br/><br/>
 
             <b>Vertreten durch</b>:<br/><br/>
 
@@ -31,11 +31,11 @@ class Impressum extends Component {
 
             USt-IdNr.<br/><br/>
 
-            folgt<br/><br/>
+            DE308029691<br/><br/>
 
             Aufsichtsbehörde:<br/><br/>
 
-            Amtsgericht Paderborn<br/>
+            Amtsgericht Mannheim<br/>
           </p>
         </div>
 
