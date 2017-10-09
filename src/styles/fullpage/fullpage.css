@@ -143,6 +143,7 @@
       align-items: center;
       padding: 50px 0; }
       .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description {
+        height: 200px;
         width: 50%; }
         .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h1, .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h4 {
           margin: 0; }
