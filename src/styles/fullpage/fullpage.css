@@ -34,8 +34,7 @@
     text-align: left;
     font-weight: 400; }
     .full_page.fp__mantra .mantra-wrapper .mantra-bullets {
-      text-align: left;
-      margin-top: 100px; }
+      text-align: left; }
     .full_page.fp__mantra .mantra-wrapper .social-icons {
       margin: 50px 0;
       background: #373737;
@@ -48,6 +47,9 @@
     .full_page.fp__mantra .mantra-wrapper {
       width: 90%;
       padding-left: 5%; } }
+  @media screen and (max-width: 767px) {
+    .full_page.fp__mantra .mantra-wrapper {
+      padding-left: 30px; } }
 
 .full_page.fp__two {
   display: block;
@@ -77,46 +79,47 @@
         padding-top: 20px; }
       .full_page.fp__two .fp__two-item .fp__two-item-description p .btn-wrapper {
         padding: 20px 0; }
-    .full_page.fp__two .fp__two-item:nth-child(1) .item-text-wrap, .full_page.fp__two .fp__two-item:nth-child(3) .item-text-wrap {
+    .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap {
       order: 2;
       text-align: left; }
-      .full_page.fp__two .fp__two-item:nth-child(1) .item-text-wrap p, .full_page.fp__two .fp__two-item:nth-child(3) .item-text-wrap p {
+      .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap p {
         float: left; }
-    .full_page.fp__two .fp__two-item:nth-child(1) .item-image-wrap, .full_page.fp__two .fp__two-item:nth-child(3) .item-image-wrap {
+    .full_page.fp__two .fp__two-item:nth-child(odd) .item-image-wrap {
       order: 1;
       text-align: right; }
-    .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap {
+    .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap {
       order: 1;
       text-align: right; }
-      .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap h1 {
+      .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap h1 {
         width: 50%;
         padding-left: 50%;
         text-align: left; }
-      .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap > b {
+      .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap > b {
         padding-left: 50%;
         width: 50%;
         float: left;
         text-align: left; }
-      .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap p {
+      .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap p {
         float: right;
         text-align: left; }
-    .full_page.fp__two .fp__two-item:nth-child(2) .item-image-wrap {
+    .full_page.fp__two .fp__two-item:nth-child(even) .item-image-wrap {
       order: 2;
       text-align: left; }
     @media screen and (max-width: 767px) {
       .full_page.fp__two .fp__two-item {
         display: block;
         padding: 50px 30px; }
-        .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap h1, .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap b {
+        .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap h1, .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap b, .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap h1, .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap b {
           width: 100%;
           padding-left: 0;
           text-align: left; }
-        .full_page.fp__two .fp__two-item .item-text-wrap, .full_page.fp__two .fp__two-item .item-image-wrap {
-          width: 100%; }
-          .full_page.fp__two .fp__two-item .item-text-wrap p, .full_page.fp__two .fp__two-item .item-image-wrap p {
+        .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap, .full_page.fp__two .fp__two-item:nth-child(even) .item-image-wrap, .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap, .full_page.fp__two .fp__two-item:nth-child(odd) .item-image-wrap {
+          width: 100%;
+          text-align: left; }
+          .full_page.fp__two .fp__two-item:nth-child(even) .item-text-wrap p, .full_page.fp__two .fp__two-item:nth-child(even) .item-image-wrap p, .full_page.fp__two .fp__two-item:nth-child(odd) .item-text-wrap p, .full_page.fp__two .fp__two-item:nth-child(odd) .item-image-wrap p {
             width: 100%; }
-        .full_page.fp__two .fp__two-item .fp__two-item-image {
-          max-height: 200px; } }
+        .full_page.fp__two .fp__two-item:nth-child(even) .fp__two-item-image, .full_page.fp__two .fp__two-item:nth-child(odd) .fp__two-item-image {
+          max-height: 150px; } }
     @media screen and (max-width: 1200px) and (min-width: 767px) {
       .full_page.fp__two .fp__two-item .fp__two-item-image {
         max-height: 300px; }

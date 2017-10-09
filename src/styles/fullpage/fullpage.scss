@@ -61,7 +61,6 @@ $secondaryColor: #373737;
 
       .mantra-bullets {
         text-align: left;
-        margin-top: 100px;
       }
 
       .social-icons {
@@ -81,6 +80,12 @@ $secondaryColor: #373737;
       .mantra-wrapper {
         width: 90%;
         padding-left: 5%;
+      }
+    }
+
+    @media screen and (max-width: $break-medium) {
+      .mantra-wrapper {
+        padding-left: 30px;
       }
     }
   }
@@ -134,7 +139,7 @@ $secondaryColor: #373737;
         }
       }
 
-      &:nth-child(1), &:nth-child(3) {
+      &:nth-child(odd) {
         .item-text-wrap {
           order: 2;
           text-align: left;
@@ -149,7 +154,7 @@ $secondaryColor: #373737;
         }
       }
 
-      &:nth-child(2) {
+      &:nth-child(even) {
         .item-text-wrap {
           order: 1;
           text-align: right;
@@ -182,7 +187,7 @@ $secondaryColor: #373737;
         display: block;
         padding: 50px 30px;
 
-        &:nth-child(2) {
+        &:nth-child(even), &:nth-child(odd) {
           .item-text-wrap {
             h1, b {
               width: 100%;
@@ -190,18 +195,18 @@ $secondaryColor: #373737;
               text-align: left;
             }
           }
-        }
-
-        .item-text-wrap, .item-image-wrap {
-          width: 100%;
-
-          p {
+          .item-text-wrap, .item-image-wrap {
             width: 100%;
-          }
-        }
+            text-align: left;
 
-        .fp__two-item-image {
-          max-height: 200px;
+            p {
+              width: 100%;
+            }
+          }
+
+          .fp__two-item-image {
+            max-height: 150px;
+          }
         }
       }
 
