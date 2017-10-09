@@ -23,6 +23,10 @@
     div {
       width: 100%;
 
+      &:nth-child(2) {
+        width: 100%;
+      }
+
       &:first-child {
         border-bottom: 1px solid black;
       }

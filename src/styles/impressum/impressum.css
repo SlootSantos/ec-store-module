@@ -14,5 +14,7 @@
       display: block; }
       .impressum div {
         width: 100%; }
+        .impressum div:nth-child(2) {
+          width: 100%; }
         .impressum div:first-child {
           border-bottom: 1px solid black; } }
