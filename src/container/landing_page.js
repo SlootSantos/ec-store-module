@@ -40,7 +40,7 @@ class LandingPage extends Component {
         name: 'Dình Huy',
         id: 'ed0ee098-d5ba-409d-b2f4-c9610feca4b4',
         imgSrc: Espresso,
-        description: 'Der <b>Espressokaffee</b> hat einen hohen Arabica Anteil, was dem Kaffee fruchtige Aromen verleiht. Da der vietnamesische Kaffee meist einen höheren Koffeinanteil hat, ist der der Kaffee sehr kräftig und hat trotzdem eine wunderbare Crema.',
+        description: 'Der <b>Espressokaffee</b> hat einen hohen Arabica Anteil, was dem Kaffee fruchtige Aromen verleiht. Da der vietnamesische Kaffee meist einen höheren Koffeinanteil hat, ist der Kaffee sehr kräftig und hat trotzdem eine wunderbare Crema.',
         bullets: ['Fruchtige Säure', 'Crema', '90% Arabica, 10% Robusta'],
         price: '€10,90'
       }
