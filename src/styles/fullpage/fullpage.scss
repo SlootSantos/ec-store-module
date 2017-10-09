@@ -43,17 +43,21 @@ $secondaryColor: #373737;
 
   &.fp__mantra {
     color: white;
-    display: block;
+    display: flex;
     min-height: 0;
-    width: 80%;
+    width: 50%;
     left: 10%;
 
     text-align: center;
     background: $secondaryColor;
 
     .mantra-wrapper {
-      width: 50%;
-      padding: 50px 25%;
+      width: 500px;
+      padding: 50px;
+
+      line-height: 1.6em;
+      text-align: left;
+      font-weight: 400;
 
       .mantra-bullets {
         text-align: left;
@@ -63,6 +67,7 @@ $secondaryColor: #373737;
       .social-icons {
         margin: 100px 0;
         background: #373737;
+        text-align: center;
 
         img {
           cursor: pointer;

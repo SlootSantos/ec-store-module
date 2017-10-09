@@ -25,7 +25,7 @@ function prodDescription(products) {
 
               { prod.bullets.map(bull => <span className="fp__two-bullet" key={bull}>{ bull }</span>) }
               <span className="btn-wrapper">
-                <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Bestellen!</Link>
+                <Link className="btn btn-primary" to={{pathname:`/shop/${prod.name.split(' ').join('_')}-${prod.id}`}}>Jetzt Bestellen!</Link>
                 {/* <a className="btn btn-primary"
                   href={`mailto:info@vo-coffee.de?subject=Bestellung ${prod.name}`}>Bestellen!</a> */}
               </span>

@@ -35,10 +35,10 @@ ReactDOM.render(
         <div className="switch_content">
           <Switch>
             <Route path="/impressum" component={ Impressum }></Route>
+            <Route path="/shop/:product-:id" component={ ProductPage }></Route>
             <Route path="/shop/checkout" component={ CheckoutPage }></Route>
             <Route path="/shop/cart" component={ Cart }></Route>
-            <Route path="/shop/:product-:id" component={ ProductPage }></Route>
-            <Route path="/" component={ LandingPage }></Route>
+            <Route path="/*" component={ LandingPage }></Route>
           </Switch>
         </div>
 

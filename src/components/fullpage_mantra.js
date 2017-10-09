@@ -9,10 +9,8 @@ function FullPageMantra() {
     <div className="full_page fp__mantra">
       <div className="mantra-wrapper">
         <p>
-          <b>
-            Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. <br/><br/>
-            Für Updates folge uns auf unseren Social Media Kanälen und sei live dabei, wie wir wachsen und die Kaffeekultur verändern!
-          </b>
+          Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. <br/><br/>
+          Für Updates folge uns auf unseren Social Media Kanälen und sei live dabei, wie wir wachsen und die Kaffeekultur verändern!
         </p>
 
         { renderIcons() }
