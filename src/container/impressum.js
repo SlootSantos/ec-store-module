@@ -29,11 +29,11 @@ class Impressum extends Component {
             <b>Telefon</b>: +49160944 463 82<br/>
             <b>E-Mail</b>: info@vo-coffee.de<br/><br/>
 
-            USt-IdNr.<br/><br/>
+            <b>USt-IdNr</b>.:<br/><br/>
 
             DE308029691<br/><br/>
 
-            Aufsichtsbehörde:<br/><br/>
+            <b>Aufsichtsbehörde</b>:<br/><br/>
 
             Amtsgericht Mannheim<br/>
           </p>

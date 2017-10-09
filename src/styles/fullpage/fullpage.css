@@ -187,7 +187,9 @@
         padding: 20px 0; }
         .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description {
           width: 70%;
-          padding-left: 15%; } }
+          padding-left: 15%;
+          height: auto;
+          min-height: 200px; } }
     @media screen and (min-width: 1200px) {
       .full_page.fp__three .fp__three-item-wrapper {
         width: 90%;
