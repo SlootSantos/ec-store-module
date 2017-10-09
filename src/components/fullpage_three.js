@@ -14,7 +14,7 @@ function FullPageThree() {
     <div className="full_page fp__three">
       <div className="fp__three-headline">
         <h1>V | O Crew</h1>
-        <h4>Wir &lt;3 Kaffee</h4>
+        <h4>Wir &#x2661; Kaffee</h4>
       </div>
       <div className="fp__three-introduction">
         <p>
@@ -31,7 +31,7 @@ function FullPageThree() {
 
 
 function renderTeamBubbles() {
-  
+
   let arr = [
     {
       img: ImgPetra,
