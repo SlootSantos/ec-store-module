@@ -107,6 +107,10 @@
       .full_page.fp__two .fp__two-item {
         display: block;
         padding: 50px 30px; }
+        .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap h1, .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap b {
+          width: 100%;
+          padding-left: 0;
+          text-align: left; }
         .full_page.fp__two .fp__two-item .item-text-wrap, .full_page.fp__two .fp__two-item .item-image-wrap {
           width: 100%; }
           .full_page.fp__two .fp__two-item .item-text-wrap p, .full_page.fp__two .fp__two-item .item-image-wrap p {
