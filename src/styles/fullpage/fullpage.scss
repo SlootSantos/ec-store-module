@@ -108,6 +108,7 @@ $secondaryColor: #373737;
       .item-text-wrap, .item-image-wrap {
         width: 50%;
       }
+
       .fp__two-item-image {
         width: 70%;
         max-height: 300px;
@@ -152,6 +153,19 @@ $secondaryColor: #373737;
         .item-text-wrap {
           order: 1;
           text-align: right;
+
+          h1 {
+            width: 50%;
+            padding-left: 50%;
+            text-align: left;
+          }
+
+          & > b {
+            padding-left: 50%;
+            width: 50%;
+            float: left;
+            text-align: left;
+          }
 
           p {
             float: right;

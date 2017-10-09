@@ -88,6 +88,15 @@
     .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap {
       order: 1;
       text-align: right; }
+      .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap h1 {
+        width: 50%;
+        padding-left: 50%;
+        text-align: left; }
+      .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap > b {
+        padding-left: 50%;
+        width: 50%;
+        float: left;
+        text-align: left; }
       .full_page.fp__two .fp__two-item:nth-child(2) .item-text-wrap p {
         float: right;
         text-align: left; }
