@@ -16,19 +16,22 @@
   .header__nav.logo img {
     max-height: 100%;
     width: 25px; }
+  .header__nav.cart img {
+    max-height: 100%;
+    width: 25px; }
   .header__nav.right {
     right: 50px;
     display: -webkit-inline-box; }
     .header__nav.right .opening_time {
       word-spacing: normal; }
-    .header__nav.right .social-icons img {
-      cursor: pointer;
-      padding: 0 5px;
-      height: 15px; }
   .header__nav.left {
     left: 50px; }
     .header__nav.left .phone_number {
       color: yellow; }
+    .header__nav.left .social-icons img {
+      cursor: pointer;
+      padding: 0 5px;
+      height: 15px; }
   @media screen and (max-width: 767px) {
     .header__nav.left, .header__nav.right {
       display: none; } }

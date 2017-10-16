@@ -15,7 +15,7 @@ import ProductPage from './container/product_page';
 import CheckoutPage from './container/checkout_page';
 import Cart from './container/cart';
 // import header && footer
-import Header from './components/header';
+import Header from './container/header';
 import Footer from './components/footer';
 
 import reducers from './reducers/index';

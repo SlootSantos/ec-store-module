@@ -29,21 +29,19 @@ $break-large: 1200px;
     }
   }
 
+  &.cart {
+    img {
+      max-height: 100%;
+      width: 25px;
+    }
+  }
+
   &.right {
     right: 50px;
     display: -webkit-inline-box;
 
     .opening_time {
       word-spacing: normal;
-    }
-
-    .social-icons {
-      img {
-        cursor: pointer;
-
-        padding: 0 5px;
-        height: 15px;
-      }
     }
   }
 
@@ -52,6 +50,15 @@ $break-large: 1200px;
 
     .phone_number {
       color: yellow;
+    }
+    
+    .social-icons {
+      img {
+        cursor: pointer;
+
+        padding: 0 5px;
+        height: 15px;
+      }
     }
   }
   @media screen and (max-width: $break-medium) {

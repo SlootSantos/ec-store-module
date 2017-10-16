@@ -11,9 +11,9 @@ import AddCartReducer from './add_cart_reducer';
 const rootReducer = combineReducers({
   products: ProductsAllReducer,
   product: ProductSingleReducer,
+  cart: GetCartReducer,
   checkout: CheckoutReducer,
-  addProd: AddCartReducer,
-  cart: GetCartReducer
+  addProd: AddCartReducer
 });
 
 export default rootReducer;

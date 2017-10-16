@@ -5,11 +5,11 @@ export const ADD_CART = 'ADD_CART';
 
 // export fetch products function
 export async function addToCart(prodId, quantity) {
-  console.log(quantity);
   let request;
 
   try {
     request = await sdk.addToCart(prodId, quantity);
+
   } catch (e) {
     request = e;
   } finally {

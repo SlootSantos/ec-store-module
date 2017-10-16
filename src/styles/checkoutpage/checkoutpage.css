@@ -1,13 +1,43 @@
 .checkout {
-  height: 100vh; }
+  padding-bottom: 30px; }
+  .checkout .header_title {
+    width: 95%;
+    padding-left: 2.5%;
+    font-size: 35px; }
   .checkout.content {
     display: flex; }
-    .checkout.content form {
-      display: flex;
-      flex-flow: row wrap;
-      width: 50%; }
-      .checkout.content form input {
-        width: 50%;
-        box-sizing: border-box;
-        flex: 1;
-        flex-basis: 50%; }
+    .checkout.content .form-wrapper {
+      width: 50%;
+      margin: 50px; }
+      .checkout.content .form-wrapper h1, .checkout.content .form-wrapper h2 {
+        padding-left: 2.5%; }
+      .checkout.content .form-wrapper form {
+        display: flex;
+        flex-flow: row wrap; }
+        .checkout.content .form-wrapper form .checkout__input.double {
+          box-sizing: border-box;
+          flex: 1;
+          flex-basis: 50%;
+          padding: 10px 0; }
+          .checkout.content .form-wrapper form .checkout__input.double input {
+            width: 90%;
+            height: 30px;
+            margin-left: 5%; }
+          .checkout.content .form-wrapper form .checkout__input.double .input__title {
+            width: 90%;
+            margin-left: 5%; }
+        .checkout.content .form-wrapper form .checkout__input.single {
+          box-sizing: border-box;
+          flex: 1;
+          flex-basis: 100%;
+          padding: 10px 0;
+          width: 50%; }
+          .checkout.content .form-wrapper form .checkout__input.single input {
+            width: 95%;
+            height: 30px;
+            margin-left: 2.5%; }
+          .checkout.content .form-wrapper form .checkout__input.single .input__title {
+            width: 95%;
+            margin-left: 2.5%; }
+  .checkout .btn.btn-primary {
+    margin-left: 2.5%; }

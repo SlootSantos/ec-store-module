@@ -38,6 +38,15 @@ $secondaryColor: #c6c8ca;
 
   &.btn-primary {
 
+    &.reverse {
+      color: white;
+      background: $secondaryColor;
+
+      &:hover {
+        color: black;
+        background: white;
+      }
+    }
   }
 
   &.btn-secondary {

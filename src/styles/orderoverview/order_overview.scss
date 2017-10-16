@@ -1,0 +1,32 @@
+.order-overview {
+  width: 95%;
+  margin-left: 2.5%;
+  padding: 50px 0;
+
+  table {
+    text-align: left;
+    width: 100%;
+
+    tr > td {
+      width: 10%;
+    }
+
+    th, .table__details > td  {
+      border-bottom: 1px solid #c6c8ca;
+    }
+
+    th {
+      font-size: larger;
+    }
+
+    td {
+      padding: 10px 0;
+    }
+
+    .table__total {
+      td {
+        padding-top: 20px;
+      }
+    }
+  }
+}

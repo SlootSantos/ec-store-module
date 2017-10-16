@@ -20,9 +20,10 @@ class Cart extends Component {
   render() {
     if ( !this.props.cart || !this.props.cart.items) { return <div className="cart">Loading...</div> };
 
+
     return(
       <div className="cart">
-        <h1>Dein Einkaufswagen</h1>
+        <h1 className="header_title">Dein Einkaufswagen</h1>
         <table className="cart__cart-table">
          <tbody>
            <tr>
@@ -37,9 +38,8 @@ class Cart extends Component {
          </tbody>
        </table>
 
-       { this.renderTotals(this.props.cart.value) }
 
-       <Link className="btn btn-secondary" to="/shop/checkout">
+       <Link className="btn btn-primary reverse" to="/shop/checkout">
          Kaufen
        </Link>
       </div>
@@ -49,7 +49,7 @@ class Cart extends Component {
   renderTable(elements) {
     return elements.items
       .map(item =>
-        <tr key={item.id}>
+        <tr key={item.id} className="table__details">
           <td>{ item.name }</td>
           <td>{ item.unit_price }</td>
           <td>{ item.quantity }</td>
@@ -59,8 +59,8 @@ class Cart extends Component {
     }
 
   renderTotals(amount) {
-    return(
-    <div>
+   return(
+    <div className="cart__cart-totals">
       <table>
         <tbody>
           <tr>

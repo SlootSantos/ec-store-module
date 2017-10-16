@@ -9,7 +9,8 @@ import ProductDescription from '../components/product_description';
 import ProductImage from '../components/product_image';
 
 import { fetchSingleProduct } from '../actions/fetch_single_product';
-
+import { addToCart } from '../actions/add_cart';
+import { getCart } from '../actions/get_cart';
 
 import '../styles/productpage/product_page.css';
 
@@ -28,6 +29,13 @@ class ProductPage extends Component {
     window.scrollTo(0, 0)
   }
 
+  addProducts(id, quant) {
+    this.props.addToCart(id, quant)
+    .then(() => {
+      this.props.getCart();
+    })
+  }
+
   render() {
     if (!this.props.product.name) { return <div className="product-page">Loading..</div> };
 
@@ -36,7 +44,7 @@ class ProductPage extends Component {
     return(
       <div className="product-page">
         <ProductImage image={ image_url }></ProductImage>
-        <ProductDescription product={ this.props.product }></ProductDescription>
+        <ProductDescription product={ this.props.product } addToCart={ this.addProducts.bind(this) }></ProductDescription>
       </div>
     )
   }
@@ -53,7 +61,11 @@ function mapStateToProps({ product }) {
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchSingleProduct}, dispatch);
+  return bindActionCreators({
+    fetchSingleProduct,
+    addToCart,
+    getCart
+  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);

@@ -24,6 +24,12 @@
   .btn:active, .btn:hover {
     color: white;
     background: #c6c8ca; }
+  .btn.btn-primary.reverse {
+    color: white;
+    background: #c6c8ca; }
+    .btn.btn-primary.reverse:hover {
+      color: black;
+      background: white; }
   .btn.btn-secondary {
     background-color: #482d2a;
     color: white; }
