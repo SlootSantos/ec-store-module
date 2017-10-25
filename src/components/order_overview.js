@@ -45,6 +45,7 @@ function renderTable(cart) {
   }
 
   function renderTotal(cart) {
+    console.log(cart);
     let shipping = parseFloat(cart.versand_kosten.split('€').pop());
     let totalAsNumber = parseFloat(cart.value.amount.split('€').pop());
     let totalAmount = `€${ shipping + totalAsNumber }`;
