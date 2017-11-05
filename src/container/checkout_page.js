@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // import connector
 // redux action binder, to make actions available in component
 import { connect } from 'react-redux';
@@ -9,6 +10,12 @@ import { checkoutCart } from '../actions/checkout_cart';
 
 import OrderOverview from '../components/order_overview';
 import SepaForm from '../components/payment_forms/sepa_form';
+import CreditcartForm from '../components/payment_forms/credit-card_from';
+// import PaypalForm from '../components/payment_forms/paypal_form';
+
+import PaypalLogo from '../assets/paypal.png';
+import SepaLogo from '../assets/sepa.png';
+import CreditLogo from '../assets/creditcards.png';
 
 import '../styles/checkoutpage/checkoutpage.css';
 
@@ -32,21 +39,21 @@ class CheckoutPage extends Component {
     this.shippingData[fieldName] = event.target.value;
   }
 
+  setDifAddress(event) {
+    this.setState({
+      showDifAdd: event.target.checked
+    });
+  }
+
   paymentDataHandler(event, fieldName) {
     this.paymentData[fieldName] = event.target.value;
   }
 
-  setDifAddress(event) {
-    this.setState({
-      showDifAdd: event.target.checked
-    })
-  }
-
   createCheckoutObject() {
-    let { customerData, paymentData, shippingData } = this;
-    let cd = customerData;
+    const { customerData, paymentData, shippingData } = this;
+    const cd = customerData;
 
-    let data = {
+    const data = {
       customer: {
         first_name: cd.firstname,
         last_name: cd.lastname,
@@ -64,18 +71,26 @@ class CheckoutPage extends Component {
       payment: paymentData
     };
 
-    data.payment['amount_int'] = this.props.cart.value.val_int + 499;
-    data.payment['currency'] = 'EUR';
-    data.payment['type'] = 'sepa';
+    data.payment.amount_int = this.props.cart.value.val_int + 499;
+    data.payment.currency = 'EUR';
+    data.payment.type = this.state.paymentType;
 
-    data['shipping'] = shippingData.first_name || shippingData.last_name
+    if (data.payment.type === 'credit') {
+      const splitDate = data.payment.expiryDate.split('.');
+      delete data.payment.expiryDate;
+
+      data.payment = Object.assign(data.payment, {
+        exp_month: splitDate[0],
+        exp_year: splitDate[1]
+      });
+    }
+
+    data.shipping = this.state.showDifAdd
     ? shippingData
     : data.billing;
 
-    debugger
-
     this.props.checkoutCart(data)
-    .then(() => { this.props.history.push('/'); })
+    .then(() => { this.props.history.push('/') });
   }
 
   render() {
@@ -89,31 +104,31 @@ class CheckoutPage extends Component {
             <form action="">
               <div className="checkout__input double">
                 <span className="input__title">Vorname *</span>
-                <input type="text" placeholder="Vorname" onChange={(e) => this.setCusData(e, 'firstname')}/>
+                <input type="text" placeholder="Vorname" onChange={e => this.setCusData(e, 'firstname')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Nachname *</span>
-                <input type="text" placeholder="Nachname" onChange={(e) => this.setCusData(e, 'lastname')}/>
+                <input type="text" placeholder="Nachname" onChange={e => this.setCusData(e, 'lastname')} />
               </div>
               <div className="checkout__input single">
                 <span className="input__title">E-Mail Adresse *</span>
-                <input type="text" placeholder="E-Mail Adresse" onChange={(e) => this.setCusData(e, 'email')}/>
+                <input type="text" placeholder="E-Mail Adresse" onChange={e => this.setCusData(e, 'email')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Straße, Hausnr. *</span>
-                <input type="text" placeholder="Straße, Hausnr." onChange={(e) => this.setCusData(e, 'line_1')}/>
+                <input type="text" placeholder="Straße, Hausnr." onChange={e => this.setCusData(e, 'line_1')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Adresszusatz</span>
-                <input type="text" placeholder="Adresszusatz" onChange={(e) => this.setCusData(e, 'line_2')}/>
+                <input type="text" placeholder="Adresszusatz" onChange={e => this.setCusData(e, 'line_2')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Postleitzahl *</span>
-                <input type="text" placeholder="Postleitzahl" onChange={(e) => this.setCusData(e, 'postcode')}/>
+                <input type="text" placeholder="Postleitzahl" onChange={e => this.setCusData(e, 'postcode')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Stadt *</span>
-                <input type="text" placeholder="Land" onChange={(e) => this.setCusData(e, 'county')}/>
+                <input type="text" placeholder="Land" onChange={e => this.setCusData(e, 'county')} />
               </div>
             </form>
           </div>
@@ -122,56 +137,95 @@ class CheckoutPage extends Component {
           <div className="form-wrapper">
             <h1>An eine andere Adresse liefern?</h1>
 
-            <input type="checkbox" className="checkout__show-dif-address" onClick={ e => this.setDifAddress(e) }/>
+            <input type="checkbox" className="checkout__show-dif-address" onClick={e => this.setDifAddress(e)} />
 
             { this.state.showDifAdd &&
-              <form action="">
+            <form action="">
               <div className="checkout__input double">
                 <span className="input__title">Vorname *</span>
-                <input type="text" placeholder="Vorname" onChange={(e) => this.setShipData(e, 'firstname')}/>
+                <input type="text" placeholder="Vorname" onChange={e => this.setShipData(e, 'firstname')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Nachname *</span>
-                <input type="text" placeholder="Nachname" onChange={(e) => this.setShipData(e, 'lastname')}/>
+                <input type="text" placeholder="Nachname" onChange={e => this.setShipData(e, 'lastname')} />
               </div>
               <div className="checkout__input single">
                 <span className="input__title">E-Mail Adresse *</span>
-                <input type="text" placeholder="E-Mail Adresse" onChange={(e) => this.setShipData(e, 'email')}/>
+                <input type="text" placeholder="E-Mail Adresse" onChange={e => this.setShipData(e, 'email')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Straße, Hausnr. *</span>
-                <input type="text" placeholder="Straße, Hausnr." onChange={(e) => this.setShipData(e, 'line_1')}/>
+                <input type="text" placeholder="Straße, Hausnr." onChange={e => this.setShipData(e, 'line_1')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Adresszusatz</span>
-                <input type="text" placeholder="Adresszusatz" onChange={(e) => this.setShipData(e, 'line_2')}/>
+                <input type="text" placeholder="Adresszusatz" onChange={e => this.setShipData(e, 'line_2')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Postleitzahl *</span>
-                <input type="text" placeholder="Postleitzahl" onChange={(e) => this.setShipData(e, 'postcode')}/>
+                <input type="text" placeholder="Postleitzahl" onChange={e => this.setShipData(e, 'postcode')} />
               </div>
               <div className="checkout__input double">
                 <span className="input__title">Stadt *</span>
-                <input type="text" placeholder="Land" onChange={(e) => this.setShipData(e, 'county')}/>
+                <input type="text" placeholder="Land" onChange={e => this.setShipData(e, 'county')} />
               </div>
             </form>}
           </div>
         </div>
 
-        <OrderOverview cart={ this.props.cart }></OrderOverview>
+        <OrderOverview cart={this.props.cart} />
 
         <div className="checkout__payment">
           <h1>Bezahlung</h1>
 
-          <SepaForm onChangeHandler={ this.paymentDataHandler.bind( this ) }></SepaForm>
+          <form className="checkout__payment-provider">
+            <div>
+
+              <div className="checkout__payment-provider-wrapper">
+                <input id="paymentPaypal" type="radio" className="checkout__show-dif-address" value="paypal" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
+                <label htmlFor="paymentPaypal">
+                  <img src={PaypalLogo} alt="" />
+                </label> <br />
+              </div>
+
+              <div className="checkout__payment-provider-wrapper">
+                <input id="paymentSepa" type="radio" className="checkout__show-dif-address" value="sepa" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
+                <label htmlFor="paymentSepa">
+                  <img src={SepaLogo} alt="" />
+                </label> <br />
+              </div>
+
+              <div className="checkout__payment-provider-wrapper">
+                <input id="paymentCredit" type="radio" className="checkout__show-dif-address" value="credit" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
+                <label htmlFor="paymentCredit">
+                  <img src={CreditLogo} alt="" />
+                </label>
+              </div>
+            </div>
+          </form>
+
+          { this.state.paymentType === 'sepa' && <SepaForm onChangeHandler={this.paymentDataHandler.bind(this)} /> }
+          { this.state.paymentType === 'credit' && <CreditcartForm onChangeHandler={this.paymentDataHandler.bind(this)} /> }
         </div>
 
 
-        <button className="btn btn-primary reverse" onClick={ () => this.createCheckoutObject() }>Kostenpflichtig bestellen</button>
+        <button className="btn btn-primary reverse" onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>
     );
   }
 }
+
+CheckoutPage.propTypes = {
+  cart: PropTypes.shape({
+    value: PropTypes.shape({
+      val_int: PropTypes.number
+    })
+  }).isRequired,
+  checkoutCart: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func
+  }).isRequired
+};
 
 // map state to props
 function mapStateToProps({ cart, checkout }) {
@@ -183,7 +237,7 @@ function mapStateToProps({ cart, checkout }) {
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCart, checkoutCart}, dispatch);
+  return bindActionCreators({ getCart, checkoutCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage);

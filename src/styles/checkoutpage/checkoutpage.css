@@ -39,6 +39,15 @@
       .checkout form .checkout__input.single .input__title, .checkout .sepa__form .checkout__input.single .input__title {
         width: 95%;
         margin-left: 2.5%; }
+  .checkout .checkout__payment-provider {
+    margin-left: 2.5%; }
+    .checkout .checkout__payment-provider .checkout__payment-provider-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0; }
+      .checkout .checkout__payment-provider .checkout__payment-provider-wrapper img {
+        margin-left: 15px; }
   .checkout .btn.btn-primary {
     margin-left: 2.5%; }
   .checkout .checkout__payment h1 {

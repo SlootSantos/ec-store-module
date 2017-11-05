@@ -66,6 +66,21 @@
     }
   }
 
+  .checkout__payment-provider {
+    margin-left: 2.5%;
+    .checkout__payment-provider-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px 0;
+
+      img {
+        margin-left: 15px;
+      }
+    }
+  }
+
   .btn.btn-primary {
     margin-left: 2.5%;
   }
@@ -77,7 +92,7 @@
   .checkout__payment {
     h1 {
       padding-left: 2.5%;
-      
+
     }
     .sepa__form {
       padding-left: 2.5%;

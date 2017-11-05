@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-function SepaForm(props) {
+function PaypalForm(props) {
   return (
     <div className="sepa__form">
-      <h3>SEPA Lastschrift</h3>
+      <h3>PayPal</h3>
 
       <div className="checkout__input single">
         <span className="input__title">Kontoinhaber *</span>
@@ -14,7 +14,7 @@ function SepaForm(props) {
 
       <div className="checkout__input single">
         <span className="input__title">IBAN *</span>
-        <input type="text" placeholder="IBAN" onChange={e => props.onChangeHandler(e, 'iban')} />
+        <input type="text" placeholder="IBAN" onChange={e => props.onChangeHandler(e, 'number')} />
       </div>
       <div className="checkout__input single">
         <span className="input__title">BIC *</span>
@@ -24,8 +24,8 @@ function SepaForm(props) {
   );
 }
 
-SepaForm.propTypes = {
+PaypalForm.propTypes = {
   onChangeHandler: PropTypes.func.isRequired
 };
 
-export default SepaForm;
+export default PaypalForm;
