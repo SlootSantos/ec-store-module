@@ -19,55 +19,94 @@
       h1, h2 {
         padding-left: 2.5%;
       }
+    }
+  }
 
+  form, .sepa__form {
+    display: flex;
+    flex-flow: row wrap;
 
-      form {
-        display: flex;
-        flex-flow: row wrap;
+    .checkout__input {
+      &.double {
+        box-sizing: border-box;
+        flex: 1;
+        flex-basis: 50%;
+        padding: 10px 0;
 
-        .checkout__input {
-          &.double {
-            box-sizing: border-box;
-            flex: 1;
-            flex-basis: 50%;
-            padding: 10px 0;
-
-            input {
-              width: 90%;
-              height: 30px;
-              margin-left: 5%;
-            }
-
-            .input__title {
-              width: 90%;
-              margin-left: 5%;
-            }
-          }
-
-          &.single {
-            box-sizing: border-box;
-            flex: 1;
-            flex-basis: 100%;
-            padding: 10px 0;
-            width: 50%;
-
-            input {
-              width: 95%;
-              height: 30px;
-              margin-left: 2.5%;
-            }
-
-            .input__title {
-              width: 95%;
-              margin-left: 2.5%;
-            }
-          }
+        input {
+          width: 90%;
+          height: 30px;
+          margin-left: 5%;
         }
+
+        .input__title {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+
+      &.single {
+        box-sizing: border-box;
+        flex: 1;
+        flex-basis: 100%;
+        padding: 10px 0;
+        width: 50%;
+
+        input {
+          width: 95%;
+          height: 30px;
+          margin-left: 2.5%;
+        }
+
+        .input__title {
+          width: 95%;
+          margin-left: 2.5%;
+        }
+      }
+    }
+  }
+
+  .checkout__payment-provider {
+    margin-left: 2.5%;
+    .checkout__payment-provider-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px 0;
+
+      img {
+        margin-left: 15px;
       }
     }
   }
 
   .btn.btn-primary {
     margin-left: 2.5%;
+  }
+
+
+
+
+  // PAYMENT FORMS
+  .checkout__payment {
+    h1 {
+      padding-left: 2.5%;
+
+    }
+    .sepa__form {
+      padding-left: 2.5%;
+      width: 30%;
+
+      border-top: 2px solid black;
+
+      .checkout__input {
+        &.double, &.single {
+          input, .input__title {
+            margin-left: 0;
+          }
+        }
+      }
+    }
   }
 }
