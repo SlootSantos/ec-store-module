@@ -16,5 +16,5 @@ export async function getCart() {
   return {
     type: GET_CART,
     payload: request
-  }
+  };
 }

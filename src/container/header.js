@@ -4,10 +4,9 @@ import React, { Component } from 'react';
 // redux action binder, to make actions available in component
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { getCart } from '../actions/get_cart';
-
-import { Link } from 'react-router-dom';
 
 import '../styles/header/header.css';
 
@@ -19,27 +18,25 @@ import instagram from '../assets/instagram-logo.svg';
 
 
 class Header extends Component {
-
   componentDidMount() {
-    this.props.getCart()
+    this.props.getCart();
   }
-
-  renderIcons() {
-    return (
-      <div className="social-icons">
-        <img onClick={ () => this.goToSocialMedia('https://facebook.com/vocoffeede') } src={facebook} alt=""/>
-        <img onClick={ () => this.goToSocialMedia('https://www.instagram.com/vo.coffee') } src={instagram} alt=""/>
-      </div>
-    )
-  };
 
   goToSocialMedia(link) {
     window.open(link);
   };
 
-  render() {
+  renderIcons() {
+    return (
+      <div className="social-icons">
+        <img onClick={() => this.goToSocialMedia('https://facebook.com/vocoffeede')} src={facebook} alt=""/>
+        <img onClick={() => this.goToSocialMedia('https://www.instagram.com/vo.coffee')} src={instagram} alt=""/>
+      </div>
+    )
+  };
 
-    let itemsCount = this.props.cart
+  render() {
+    const itemsCount = this.props.cart
     ? this.props.cart.quantity
     : '0';
 
@@ -52,19 +49,19 @@ class Header extends Component {
 
         </div>
         <div className="header__nav logo">
-          <Link to="/"><img src={Logo} alt=""/></Link>
+          <Link to="/"><img src={Logo} alt="" /></Link>
         </div>
 
 
         <div className="header__nav right">
           <Link to="/shop/cart">
-            <CartIcon count={ itemsCount }></CartIcon>
+            <CartIcon count={itemsCount} />
           </Link>
         </div>
       </div>
-    )
+    );
   }
-};
+}
 
 
 // map dispatch to props
@@ -75,7 +72,6 @@ function mapDispatchToProps(dispatch) {
 
 // map state to props
 function mapStateToProps({ cart }) {
-
   return {
     cart
   };
