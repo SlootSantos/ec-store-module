@@ -11,7 +11,7 @@ import { checkoutCart } from '../actions/checkout_cart';
 import OrderOverview from '../components/order_overview';
 import SepaForm from '../components/payment_forms/sepa_form';
 import CreditcartForm from '../components/payment_forms/credit-card_from';
-// import PaypalForm from '../components/payment_forms/paypal_form';
+import PaymentOverlay from '../components/payment_overlay';
 
 import PaypalLogo from '../assets/paypal.png';
 import SepaLogo from '../assets/sepa.png';
@@ -23,7 +23,10 @@ class CheckoutPage extends Component {
   constructor() {
     super();
 
-    this.state = { showDifAdd: false };
+    this.state = {
+      showDifAdd: false,
+      processPayment: false
+    };
   }
   componentWillMount() {
     this.customerData = {};
@@ -50,6 +53,9 @@ class CheckoutPage extends Component {
   }
 
   createCheckoutObject() {
+    this.setState({
+      processPayment: true
+    });
     const { customerData, paymentData, shippingData } = this;
     const cd = customerData;
 
@@ -89,13 +95,15 @@ class CheckoutPage extends Component {
     ? shippingData
     : data.billing;
 
-    this.props.checkoutCart(data)
-    .then(() => { this.props.history.push('/') });
+    checkoutCart(data)
+    .then(() => this.props.history.push('/shop/checkout/success'))
+    .catch(() => this.props.history.push('/shop/checkout/fail'));
   }
 
   render() {
     return (
       <div className="checkout">
+        { this.state.processPayment && <PaymentOverlay />}
         <h1 className="header_title">Dein Checkout</h1>
         {/* <PaypalButton id="button" /> */}
         <div className="checkout content">
@@ -221,23 +229,21 @@ CheckoutPage.propTypes = {
       val_int: PropTypes.number
     })
   }).isRequired,
-  checkoutCart: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func
   }).isRequired
 };
 
 // map state to props
-function mapStateToProps({ cart, checkout }) {
+function mapStateToProps({ cart }) {
   return {
-    cart,
-    checkout
+    cart
   };
 }
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCart, checkoutCart }, dispatch);
+  return bindActionCreators({ getCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage);
