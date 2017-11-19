@@ -58,3 +58,10 @@
     border-top: 2px solid black; }
     .checkout .checkout__payment .sepa__form .checkout__input.double input, .checkout .checkout__payment .sepa__form .checkout__input.double .input__title, .checkout .checkout__payment .sepa__form .checkout__input.single input, .checkout .checkout__payment .sepa__form .checkout__input.single .input__title {
       margin-left: 0; }
+  .checkout.payment__success {
+    height: calc(100vh - 380px);
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .checkout.payment__success span:first-of-type {
+      font-weight: bold; }

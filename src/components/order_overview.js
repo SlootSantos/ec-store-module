@@ -16,7 +16,7 @@ function renderTable(cart) {
   function renderTotal(cart) {
     const shipping = parseFloat(cart.versand_kosten.split('€').pop());
     const totalAsNumber = parseFloat(cart.value.amount.split('€').pop());
-    const totalAmount = `€${shipping + totalAsNumber}`;
+    const totalAmount = `€${Math.round((shipping + totalAsNumber) * 100) / 100}`;
 
     return (
       <tr className="table__total">

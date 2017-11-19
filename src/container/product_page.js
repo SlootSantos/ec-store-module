@@ -12,48 +12,64 @@ import { fetchSingleProduct } from '../actions/fetch_single_product';
 import { addToCart } from '../actions/add_cart';
 import { getCart } from '../actions/get_cart';
 
+import { mockData } from '../container/landing_page';
+
 import '../styles/productpage/product_page.css';
 
 
-
 class ProductPage extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    let { fetchSingleProduct, match: {params} } = this.props;
+    let { fetchSingleProduct, match: { params } } = this.props;
 
     fetchSingleProduct(params.id);
+
+    this.state = {
+      loading: false
+    };
   }
 
-  componentDidMount () {
-    window.scrollTo(0, 0)
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   addProducts(id, quant) {
+    this.setState({
+      loading: true
+    });
+
     this.props.addToCart(id, quant)
     .then(() => {
+      this.setState({
+        loading: false
+      });
       this.props.getCart();
-    })
+    });
   }
 
   render() {
     if (!this.props.product.name) { return <div className="product-page">Loading..</div> };
+    const product = mockData.filter(d => this.props.match.params.id === d.id).pop();
 
-    let { image_url } = this.props.product;
+    const { image_url } = this.props.product;
 
-    return(
+    return (
       <div className="product-page">
-        <ProductImage image={ image_url }></ProductImage>
-        <ProductDescription product={ this.props.product } addToCart={ this.addProducts.bind(this) }></ProductDescription>
+        <ProductImage image={image_url} />
+        <ProductDescription
+          product={product}
+          loading={this.state.loading}
+          addToCart={this.addProducts.bind(this)}
+        />
       </div>
-    )
+    );
   }
 }
 
 
 // map state to props
 function mapStateToProps({ product }) {
-
   return {
     product
   };

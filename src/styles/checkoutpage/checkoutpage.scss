@@ -109,4 +109,17 @@
       }
     }
   }
+
+  &.payment__success {
+    height: calc(100vh - 380px);
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    span {
+      &:first-of-type {
+        font-weight: bold;
+      }
+    }
+  }
 }
