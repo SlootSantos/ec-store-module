@@ -15,6 +15,6 @@ export async function addToCart(prodId, quantity) {
     return {
       type: ADD_CART,
       payload: request
-    }
+    };
   }
 }

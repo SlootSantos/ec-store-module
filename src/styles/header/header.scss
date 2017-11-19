@@ -51,7 +51,7 @@ $break-large: 1200px;
     .phone_number {
       color: yellow;
     }
-    
+
     .social-icons {
       img {
         cursor: pointer;
@@ -62,7 +62,7 @@ $break-large: 1200px;
     }
   }
   @media screen and (max-width: $break-medium) {
-    &.left, &.right  {
+    &.left  {
       display: none;
     }
   }

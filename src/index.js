@@ -7,7 +7,7 @@ import ReduxPromise from 'redux-promise';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import LandingPage from './container/landing_page';
+import { LandingPage } from './container/landing_page';
 import Impressum from './container/impressum';
 import ProductPage from './container/product_page';
 import CheckoutPage from './container/checkout_page';
