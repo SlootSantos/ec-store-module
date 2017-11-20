@@ -38,7 +38,7 @@ class Header extends Component {
   render() {
     const itemsCount = this.props.cart
     ? this.props.cart.quantity
-    : '0';
+    : 0;
 
     return (
       <div className="header">
@@ -55,7 +55,7 @@ class Header extends Component {
 
         <div className="header__nav right">
           <Link to="/shop/cart">
-            <CartIcon count={itemsCount} />
+            <CartIcon count={itemsCount || 0} />
           </Link>
         </div>
       </div>

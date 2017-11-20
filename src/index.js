@@ -14,6 +14,7 @@ import CheckoutPage from './container/checkout_page';
 import Cart from './container/cart';
 import CheckoutSuccess from './components/checkout_success';
 import CheckoutFail from './components/checkout_fail';
+import PP from './components/pp_return';
 // import header && footer
 import Header from './container/header';
 import Footer from './components/footer';
@@ -38,6 +39,8 @@ ReactDOM.render(
             <Route path="/impressum" component={Impressum} />
             <Route path="/shop/checkout/success" component={CheckoutSuccess} />
             <Route path="/shop/checkout/fail" component={CheckoutFail} />
+            <Route path="/shop/checkout/pp/success" component={PP} />
+            <Route path="/shop/checkout/pp/fail" component={PP} />
             <Route path="/shop/checkout" component={CheckoutPage} />
             <Route path="/shop/cart" component={Cart} />
             <Route path="/shop/:product-:id" component={ProductPage} />
