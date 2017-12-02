@@ -12,6 +12,7 @@ import OrderOverview from '../components/order_overview';
 import SepaForm from '../components/payment_forms/sepa_form';
 import CreditcartForm from '../components/payment_forms/credit-card_from';
 import PaymentOverlay from '../components/payment_overlay';
+import BackButton from '../components/back_button';
 
 import PaypalLogo from '../assets/paypal.png';
 import SepaLogo from '../assets/sepa.png';
@@ -106,6 +107,7 @@ class CheckoutPage extends Component {
   render() {
     return (
       <div className="checkout">
+        <BackButton />
         { this.state.processPayment && <PaymentOverlay />}
         <h1 className="header_title">Dein Checkout</h1>
         {/* <PaypalButton id="button" /> */}

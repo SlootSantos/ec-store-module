@@ -1,5 +1,5 @@
 .cart {
-  min-height: 100vh;
+  min-height: calc(100vh - 350px);
   width: 100vw;
 
   .header_title {
@@ -7,6 +7,15 @@
     padding-left: 2.5%;
 
     font-size: 35px;
+  }
+
+  .cart__empty {
+    width: 95%;
+    padding-left: 2.5%;
+  }
+
+  .cart__table-wraper {
+    margin-bottom: 20px;
   }
 
   .cart__cart-table {
