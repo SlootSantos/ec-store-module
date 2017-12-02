@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import manualClearProcessCart from '../actions/clear_cart';
+import { getCart } from '../actions/get_cart';
 
 import '../styles/checkoutpage/checkoutpage.css';
 
@@ -20,11 +21,18 @@ const CheckoutSuccess = withRouter(({ history, location }) => {
       }
     });
 
-    manualClearProcessCart(params);
+    manualClearProcessCart(params)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+    .then(() => {
+      getCart();
+      history.push('/');
+    });
   }
-  setTimeout(() => {
-    history.push('/');
-  }, 2000);
 
   return (
     <div className="checkout content payment__success">

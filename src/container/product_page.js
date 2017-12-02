@@ -13,6 +13,8 @@ import { addToCart } from '../actions/add_cart';
 import { getCart } from '../actions/get_cart';
 
 import { mockData } from '../container/landing_page';
+import BackButton from '../components/back_button';
+
 
 import '../styles/productpage/product_page.css';
 
@@ -49,19 +51,22 @@ class ProductPage extends Component {
   }
 
   render() {
-    if (!this.props.product.name) { return <div className="product-page">Loading..</div> };
+    if (!this.props.product.name) { return <div className="product-page_wrap">Loading..</div> };
     const product = mockData.filter(d => this.props.match.params.id === d.id).pop();
 
-    const { image_url } = this.props.product;
+    const { img_url } = product;
 
     return (
-      <div className="product-page">
-        <ProductImage image={image_url} />
-        <ProductDescription
-          product={product}
-          loading={this.state.loading}
-          addToCart={this.addProducts.bind(this)}
-        />
+      <div className="product-page_wrap">
+        <BackButton />
+        <div className="product-page">
+          <ProductImage image={img_url} />
+          <ProductDescription
+            product={product}
+            loading={this.state.loading}
+            addToCart={this.addProducts.bind(this)}
+          />
+        </div>
       </div>
     );
   }
