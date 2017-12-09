@@ -7,7 +7,7 @@ export const GET_CART = 'GET_CART';
 export async function getCart() {
   sdk.options();
   let request;
-  
+
   try {
     request = await sdk.getCart();
   } catch (e) {

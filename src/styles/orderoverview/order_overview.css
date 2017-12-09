@@ -15,3 +15,6 @@
       padding: 10px 0; }
     .order-overview table .table__total td {
       padding-top: 20px; }
+  @media screen and (max-width: 767px) {
+    .order-overview {
+      padding-top: 20px; } }

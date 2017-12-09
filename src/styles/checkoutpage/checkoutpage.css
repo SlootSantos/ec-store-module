@@ -11,6 +11,22 @@
       margin: 50px; }
       .checkout.content .form-wrapper h1, .checkout.content .form-wrapper h2 {
         padding-left: 2.5%; }
+      .checkout.content .form-wrapper input.checkout__show-dif-address {
+        margin-left: 2.5%; }
+  @media screen and (max-width: 767px) {
+    .checkout.content {
+      display: block; }
+      .checkout.content .form-wrapper {
+        width: 95%;
+        margin: 0; }
+        .checkout.content .form-wrapper h1 {
+          font-size: 20px; }
+        .checkout.content .form-wrapper:first-child {
+          padding-bottom: 30px; }
+    .checkout .btn.btn-primary {
+      margin-top: 30px;
+      width: 95%;
+      margin-left: 2.5%; } }
   .checkout form, .checkout .sepa__form {
     display: flex;
     flex-flow: row wrap; }
@@ -58,6 +74,8 @@
     border-top: 2px solid black; }
     .checkout .checkout__payment .sepa__form .checkout__input.double input, .checkout .checkout__payment .sepa__form .checkout__input.double .input__title, .checkout .checkout__payment .sepa__form .checkout__input.single input, .checkout .checkout__payment .sepa__form .checkout__input.single .input__title {
       margin-left: 0; }
+  .checkout .checkout__payment .sepa__form {
+    width: 95%; }
   .checkout.payment__success {
     height: calc(100vh - 380px);
     justify-content: center;
