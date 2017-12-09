@@ -19,6 +19,35 @@
       h1, h2 {
         padding-left: 2.5%;
       }
+      input.checkout__show-dif-address {
+        margin-left: 2.5%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &.content {
+      display: block;
+
+      .form-wrapper {
+        width: 95%;
+        margin: 0;
+        // padding-left: 2.5%;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        &:first-child {
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .btn.btn-primary {
+      margin-top: 30px;
+      width: 95%;
+      margin-left: 2.5%;
     }
   }
 
@@ -107,6 +136,11 @@
           }
         }
       }
+    }
+
+    @media screen and (max-width: 767px) { }
+    .sepa__form {
+      width: 95%;
     }
   }
 

@@ -40,7 +40,7 @@ ReactDOM.render(
             <Route path="/shop/checkout/success" component={CheckoutSuccess} />
             <Route path="/shop/checkout/fail" component={CheckoutFail} />
             <Route path="/shop/checkout/pp/success" component={PP} />
-            <Route path="/shop/checkout/pp/fail" component={PP} />
+            <Route path="/shop/checkout/pp/fail" component={CheckoutFail} />
             <Route path="/shop/checkout" component={CheckoutPage} />
             <Route path="/shop/cart" component={Cart} />
             <Route path="/shop/:product-:id" component={ProductPage} />

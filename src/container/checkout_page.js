@@ -78,7 +78,8 @@ class CheckoutPage extends Component {
       payment: paymentData
     };
 
-    data.payment.amount_int = Math.round((this.props.cart.value.val_int + 499) * 100) / 100;
+    data.payment.amount_int = Math.round((this.props.cart.value.val_int) * 100) / 100;
+    // data.payment.amount_int = Math.round((this.props.cart.value.val_int + 499) * 100) / 100;
     data.payment.currency = 'EUR';
     data.payment.type = this.state.paymentType;
 
@@ -97,9 +98,14 @@ class CheckoutPage extends Component {
     : data.billing;
 
     checkoutCart(data)
-    .then(() => {
-    this.props.getCart();
-    this.props.history.push('/shop/checkout/success');
+    .then((res) => {
+      console.log(res);
+      if (res.data.errors) {
+        this.props.history.push('/shop/checkout/fail');
+      } else {
+        this.props.getCart();
+        this.props.history.push('/shop/checkout/success');
+      }
   })
     .catch(() => this.props.history.push('/shop/checkout/fail'));
   }
