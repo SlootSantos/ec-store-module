@@ -87,7 +87,14 @@ class CheckoutPage extends Component {
     data.payment.type = this.state.paymentType;
 
     if (data.payment.type === 'credit') {
-      const splitDate = data.payment.expiryDate.split('.');
+      const { expiryDate } = data.payment;
+
+      if (!expiryDate.match(/[0-9]{2}[ -|/|.][0-9]{4}/g)) { return }
+
+      const splitDate = expiryDate.match(/\./g)
+      ? expiryDate.split('.')
+      : expiryDate.split('/');
+
       delete data.payment.expiryDate;
 
       data.payment = Object.assign(data.payment, {
