@@ -10,8 +10,10 @@ const CheckoutFail = withRouter(({ history }) => {
   }, 3000);
   return (
     <div className="checkout content payment__success">
-      <h1>Das hat leider nicht funktioniert!!</h1>
-      <span>Probiere es nochmal!</span>
+      <div>
+        <h1>Das hat leider nicht funktioniert!!</h1>
+        <span>Probiere es nochmal!</span>
+      </div>
     </div>);
 });
 
