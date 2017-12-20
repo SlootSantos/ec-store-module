@@ -9,6 +9,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { LandingPage } from './container/landing_page';
 import Impressum from './container/impressum';
+import AGB from './container/agb';
 import ProductPage from './container/product_page';
 import CheckoutPage from './container/checkout_page';
 import Cart from './container/cart';
@@ -36,6 +37,7 @@ ReactDOM.render(
 
         <div className="switch_content">
           <Switch>
+            <Route path="/agb" component={AGB} />
             <Route path="/impressum" component={Impressum} />
             <Route path="/shop/checkout/success" component={CheckoutSuccess} />
             <Route path="/shop/checkout/fail" component={CheckoutFail} />

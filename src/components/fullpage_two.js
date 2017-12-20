@@ -46,9 +46,7 @@ function FullPageTwo(props) {
         { prodDescription(products) }
       </div>
       <div className="disclaimer">
-        Jeweils 250g verfügbar <b>gemahlen</b> oder in <b>Bohnen</b> <br />
-        Preise zzgl. €4,99 Versand <br />
-        <b>Zahlbar per PayPal oder Vorkasse</b>
+        Jeweils 250g verfügbar <b>gemahlen</b> oder in <b>Bohnen</b>
       </div>
     </div>
   );

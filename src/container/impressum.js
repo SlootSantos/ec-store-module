@@ -5,13 +5,11 @@ import BackButton from '../components/back_button';
 import '../styles/impressum/impressum.css';
 
 class Impressum extends Component {
-
-  componentDidMount () {
-    window.scrollTo(0, 0)
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
   render() {
-
     return (
       <div>
         <BackButton />

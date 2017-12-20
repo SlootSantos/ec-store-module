@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // redux action binder, to make actions available in component
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
 import { getCart } from '../actions/get_cart';
 import { checkoutCart } from '../actions/checkout_cart';
@@ -17,6 +18,8 @@ import BackButton from '../components/back_button';
 import PaypalLogo from '../assets/paypal.png';
 import SepaLogo from '../assets/sepa.png';
 import CreditLogo from '../assets/creditcards.png';
+import Widerrufsformular from '../assets/Widerrufsformular.pdf';
+
 
 import '../styles/checkoutpage/checkoutpage.css';
 
@@ -227,7 +230,10 @@ class CheckoutPage extends Component {
           { this.state.paymentType === 'credit' && <CreditcartForm onChangeHandler={this.paymentDataHandler.bind(this)} /> }
         </div>
 
-
+        <div className="checkout__agreement">
+          <input type="checkbox" className="checkout__show-dif-address" />
+          <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/impressum">Allgemeinen Geschäftsbedingungen</Link> und <Link to={Widerrufsformular} target="_blank">Widerrufsbestimmungen</Link> einverstanden.</span>
+        </div>
         <button className="btn btn-primary reverse" onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>
     );
