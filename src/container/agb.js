@@ -197,8 +197,6 @@ class AGB extends Component {
           UG (haftungsbeschränkt),<br />
           Petra Vo,<br />
           Rheinhäuser Str. 12 68165 Mannheim<br />
-          Öffnungszeiten:
-          [Öffnungszeiten]. <br />
 
           <h2>Haftungsausschluss</h2>
           Schadensersatzansprüche des Kunden sind ausgeschlossen, soweit sich aus

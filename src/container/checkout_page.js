@@ -102,7 +102,6 @@ class CheckoutPage extends Component {
 
     checkoutCart(data)
     .then((res) => {
-      console.log(res);
       if (res.data.errors) {
         this.props.history.push('/shop/checkout/fail');
       } else {
@@ -231,10 +230,10 @@ class CheckoutPage extends Component {
         </div>
 
         <div className="checkout__agreement">
-          <input type="checkbox" className="checkout__show-dif-address" />
+          <input type="checkbox" className="checkout__show-dif-address" onClick={() => this.setState({ agreed: !this.state.agreed })} />
           <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/impressum">Allgemeinen Geschäftsbedingungen</Link> und <Link to={Widerrufsformular} target="_blank">Widerrufsbestimmungen</Link> einverstanden.</span>
         </div>
-        <button className="btn btn-primary reverse" onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
+        <button className={`btn btn-primary reverse ${!this.state.agreed ? 'disabled' : ''}`} disabled={!this.state.agreed} onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>
     );
   }
