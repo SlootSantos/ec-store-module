@@ -58,4 +58,16 @@ $secondaryColor: #c6c8ca;
       color: $secondaryColor;
     }
   }
+
+  &.disabled {
+    opacity: .5;
+    color: white;
+    background: $secondaryColor;
+
+    &:hover {
+      color: white !important;
+      background: $secondaryColor !important;
+      cursor: not-allowed;
+    }
+  }
 }

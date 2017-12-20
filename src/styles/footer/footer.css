@@ -25,6 +25,8 @@
     .footer div.content h1, .footer div.content span, .footer div.content b {
       width: 60%;
       padding-left: 20%; }
+      .footer div.content h1.block, .footer div.content span.block, .footer div.content b.block {
+        display: block; }
   @media screen and (max-width: 767px) {
     .footer img {
       height: 70%; }

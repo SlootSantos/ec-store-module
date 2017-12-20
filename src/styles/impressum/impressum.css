@@ -18,3 +18,8 @@
           width: 100%; }
         .impressum div:first-child {
           border-bottom: 1px solid black; } }
+
+.AGB {
+  width: 95%;
+  padding-left: 2.5%;
+  padding-bottom: 30px; }

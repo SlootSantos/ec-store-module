@@ -36,3 +36,11 @@
     .btn.btn-secondary:hover {
       background-color: white;
       color: #c6c8ca; }
+  .btn.disabled {
+    opacity: .5;
+    color: white;
+    background: #c6c8ca; }
+    .btn.disabled:hover {
+      color: white !important;
+      background: #c6c8ca !important;
+      cursor: not-allowed; }
