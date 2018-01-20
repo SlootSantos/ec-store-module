@@ -9,14 +9,12 @@ export async function addToCart(prodId, quantity) {
 
   try {
     request = await sdk.addToCart(prodId, quantity);
-
   } catch (e) {
     request = e;
   } finally {
-
     return {
       type: ADD_CART,
       payload: request
-    }
+    };
   }
 }

@@ -6,4 +6,4 @@ export {
   PAYMILL_PUBLIC_KEY,
   STORE_ID,
   API_URL
-}
+};

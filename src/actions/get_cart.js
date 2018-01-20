@@ -5,6 +5,7 @@ export const GET_CART = 'GET_CART';
 
 // export fetch cart function
 export async function getCart() {
+  sdk.options();
   let request;
 
   try {
@@ -16,5 +17,5 @@ export async function getCart() {
   return {
     type: GET_CART,
     payload: request
-  }
+  };
 }

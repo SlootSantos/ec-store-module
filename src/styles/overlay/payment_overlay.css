@@ -1,0 +1,22 @@
+.payment_overlay {
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .payment_overlay .payment_spinner {
+    text-align: center; }
+    .payment_overlay .payment_spinner img {
+      height: 100px;
+      width: 100%;
+      margin-bottom: 10px; }
+    .payment_overlay .payment_spinner .payment_loader {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px; }

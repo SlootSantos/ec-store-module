@@ -33,5 +33,5 @@
       padding: 0 5px;
       height: 15px; }
   @media screen and (max-width: 767px) {
-    .header__nav.left, .header__nav.right {
+    .header__nav.left {
       display: none; } }

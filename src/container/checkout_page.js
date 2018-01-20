@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // redux action binder, to make actions available in component
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Link } from 'react-router-dom';
 
 import { getCart } from '../actions/get_cart';
 import { checkoutCart } from '../actions/checkout_cart';
@@ -11,11 +12,14 @@ import { checkoutCart } from '../actions/checkout_cart';
 import OrderOverview from '../components/order_overview';
 import SepaForm from '../components/payment_forms/sepa_form';
 import CreditcartForm from '../components/payment_forms/credit-card_from';
-// import PaypalForm from '../components/payment_forms/paypal_form';
+import PaymentOverlay from '../components/payment_overlay';
+import BackButton from '../components/back_button';
 
 import PaypalLogo from '../assets/paypal.png';
 import SepaLogo from '../assets/sepa.png';
 import CreditLogo from '../assets/creditcards.png';
+import Widerrufsformular from '../assets/Widerrufsformular.pdf';
+
 
 import '../styles/checkoutpage/checkoutpage.css';
 
@@ -23,7 +27,10 @@ class CheckoutPage extends Component {
   constructor() {
     super();
 
-    this.state = { showDifAdd: false };
+    this.state = {
+      showDifAdd: false,
+      processPayment: false
+    };
   }
   componentWillMount() {
     this.customerData = {};
@@ -50,6 +57,9 @@ class CheckoutPage extends Component {
   }
 
   createCheckoutObject() {
+    this.setState({
+      processPayment: true
+    });
     const { customerData, paymentData, shippingData } = this;
     const cd = customerData;
 
@@ -71,12 +81,20 @@ class CheckoutPage extends Component {
       payment: paymentData
     };
 
-    data.payment.amount_int = this.props.cart.value.val_int + 499;
+    data.payment.amount_int = Math.round((this.props.cart.value.val_int) * 100) / 100;
+    // data.payment.amount_int = Math.round((this.props.cart.value.val_int + 499) * 100) / 100;
     data.payment.currency = 'EUR';
     data.payment.type = this.state.paymentType;
 
     if (data.payment.type === 'credit') {
-      const splitDate = data.payment.expiryDate.split('.');
+      const { expiryDate } = data.payment;
+
+      if (!expiryDate.match(/[0-9]{2}[ -|/|.][0-9]{4}/g)) { return }
+
+      const splitDate = expiryDate.match(/\./g)
+      ? expiryDate.split('.')
+      : expiryDate.split('/');
+
       delete data.payment.expiryDate;
 
       data.payment = Object.assign(data.payment, {
@@ -89,13 +107,23 @@ class CheckoutPage extends Component {
     ? shippingData
     : data.billing;
 
-    this.props.checkoutCart(data)
-    .then(() => { this.props.history.push('/') });
+    checkoutCart(data)
+    .then((res) => {
+      if (res.data.errors) {
+        this.props.history.push('/shop/checkout/fail');
+      } else {
+        this.props.getCart();
+        this.props.history.push('/shop/checkout/success');
+      }
+  })
+    .catch(() => this.props.history.push('/shop/checkout/fail'));
   }
 
   render() {
     return (
       <div className="checkout">
+        <BackButton />
+        { this.state.processPayment && <PaymentOverlay />}
         <h1 className="header_title">Dein Checkout</h1>
         {/* <PaypalButton id="button" /> */}
         <div className="checkout content">
@@ -208,36 +236,38 @@ class CheckoutPage extends Component {
           { this.state.paymentType === 'credit' && <CreditcartForm onChangeHandler={this.paymentDataHandler.bind(this)} /> }
         </div>
 
-
-        <button className="btn btn-primary reverse" onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
+        <div className="checkout__agreement">
+          <input type="checkbox" className="checkout__show-dif-address" onClick={() => this.setState({ agreed: !this.state.agreed })} />
+          <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/agb">Allgemeinen Geschäftsbedingungen</Link> und <Link to={Widerrufsformular} target="_blank">Widerrufsbestimmungen</Link> einverstanden.</span>
+        </div>
+        <button className={`btn btn-primary reverse ${!this.state.agreed ? 'disabled' : ''}`} disabled={!this.state.agreed} onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>
     );
   }
 }
 
 CheckoutPage.propTypes = {
+  getCart: PropTypes.func.isRequired,
   cart: PropTypes.shape({
     value: PropTypes.shape({
       val_int: PropTypes.number
     })
   }).isRequired,
-  checkoutCart: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func
   }).isRequired
 };
 
 // map state to props
-function mapStateToProps({ cart, checkout }) {
+function mapStateToProps({ cart }) {
   return {
-    cart,
-    checkout
+    cart
   };
 }
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCart, checkoutCart }, dispatch);
+  return bindActionCreators({ getCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage);

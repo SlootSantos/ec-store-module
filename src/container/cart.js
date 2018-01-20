@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 
 import { getCart } from '../actions/get_cart';
 
+import BackButton from '../components/back_button';
+
 import '../styles/cart/cart.css';
 
 
@@ -15,35 +17,6 @@ class Cart extends Component {
     super(props)
 
     this.props.getCart();
-  }
-
-  render() {
-    if ( !this.props.cart || !this.props.cart.items) { return <div className="cart">Loading...</div> };
-
-
-    return(
-      <div className="cart">
-        <h1 className="header_title">Dein Einkaufswagen</h1>
-        <table className="cart__cart-table">
-         <tbody>
-           <tr>
-             <th>Produkt</th>
-             <th>Preis</th>
-             <th>Anzahl</th>
-             <th>Gesamt</th>
-           </tr>
-
-           { this.renderTable(this.props.cart) }
-
-         </tbody>
-       </table>
-
-
-       <Link className="btn btn-primary reverse" to="/shop/checkout">
-         Kaufen
-       </Link>
-      </div>
-    );
   }
 
   renderTable(elements) {
@@ -59,7 +32,7 @@ class Cart extends Component {
     }
 
   renderTotals(amount) {
-   return(
+   return (
     <div className="cart__cart-totals">
       <table>
         <tbody>
@@ -83,12 +56,52 @@ class Cart extends Component {
     );
   }
 
+  render() {
+    window.scrollTo(0, 0);
+
+
+    return (
+      <div className="cart">
+        <BackButton />
+        <h1 className="header_title">Dein Einkaufswagen</h1>
+
+        { (!this.props.cart || !this.props.cart.items) &&
+          <div>
+            <div className="cart__empty">
+              Du hast noch keinen Kaffee im Einkaufswagen...
+            </div>
+          </div>
+        }
+
+        { (this.props.cart && this.props.cart.items) &&
+          <div className="cart__table-wraper">
+            <table className="cart__cart-table">
+              <tbody>
+                <tr>
+                  <th>Produkt</th>
+                  <th>Preis</th>
+                  <th>Anzahl</th>
+                  <th>Gesamt</th>
+                </tr>
+
+                { this.renderTable(this.props.cart) }
+
+              </tbody>
+            </table>
+
+
+            <Link className="btn btn-primary reverse" to="/shop/checkout">
+             Kaufen
+            </Link>
+          </div> }
+      </div>
+    );
+  }
 }
 
 
 // map state to props
 function mapStateToProps({ cart }) {
-
   return {
     cart
   };
@@ -96,7 +109,7 @@ function mapStateToProps({ cart }) {
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCart}, dispatch);
+  return bindActionCreators({ getCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
