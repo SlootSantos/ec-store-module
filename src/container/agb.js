@@ -264,6 +264,9 @@ class AGB extends Component {
           <h2>Salvatorische Klausel</h2>
           Die Unwirksamkeit einer Bestimmung dieser AGB hat keine Auswirkungen auf
           die Wirksamkeit der sonstigen Bestimmungen.
+          <br />
+          <br />
+          AGB mithilfe des Generators der Deutschen Anwaltshotline AG erstellt
         </div>
       </div>
     );
