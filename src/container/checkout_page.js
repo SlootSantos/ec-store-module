@@ -82,8 +82,8 @@ class CheckoutPage extends Component {
       payment: paymentData
     };
 
-    data.payment.amount_int = Math.round((this.props.cart.value.val_int) * 100) / 100;
-    // data.payment.amount_int = Math.round((this.props.cart.value.val_int + 499) * 100) / 100;
+    // data.payment.amount_int = Math.round((this.props.cart.value.val_int) * 100) / 100;
+    data.payment.amount_int = Math.round((this.props.cart.value.val_int + 499) * 100) / 100;
     data.payment.currency = 'EUR';
     data.payment.type = this.state.paymentType;
 
