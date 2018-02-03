@@ -1,0 +1,16 @@
+.cart-icon {
+  width: 30px; }
+  .cart-icon img {
+    height: 100%;
+    width: 100%; }
+  .cart-icon .cart-icon__counter {
+    border: 1px solid white;
+    height: 15px;
+    width: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: right;
+    color: white; }

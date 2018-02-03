@@ -1,17 +1,25 @@
 .impressum {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
   .impressum div {
-    width: 50%;
+    width: 30%;
     padding: 0 30px; }
-    .impressum div:nth-child(2) p {
-      width: 80%; }
+    .impressum div:nth-child(2) {
+      width: 70%; }
+      .impressum div:nth-child(2) p {
+        width: 80%; }
   @media screen and (max-width: 767px) {
     .impressum {
       display: block; }
       .impressum div {
         width: 100%; }
+        .impressum div:nth-child(2) {
+          width: 100%; }
         .impressum div:first-child {
           border-bottom: 1px solid black; } }
+
+.AGB {
+  width: 95%;
+  padding-left: 2.5%;
+  padding-bottom: 30px; }

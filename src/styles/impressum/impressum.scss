@@ -3,13 +3,15 @@
   display: flex;
 
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   div {
-    width: 50%;
+    width: 30%;
     padding: 0 30px;
 
     &:nth-child(2) {
+      width: 70%;
+
       p {
         width: 80%;
       }
@@ -21,9 +23,20 @@
     div {
       width: 100%;
 
+      &:nth-child(2) {
+        width: 100%;
+      }
+
       &:first-child {
         border-bottom: 1px solid black;
       }
     }
   }
+}
+
+.AGB {
+  width: 95%;
+  padding-left: 2.5%;
+
+  padding-bottom: 30px;
 }

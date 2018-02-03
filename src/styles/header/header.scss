@@ -29,12 +29,27 @@ $break-large: 1200px;
     }
   }
 
+  &.cart {
+    img {
+      max-height: 100%;
+      width: 25px;
+    }
+  }
+
   &.right {
     right: 50px;
     display: -webkit-inline-box;
 
     .opening_time {
       word-spacing: normal;
+    }
+  }
+
+  &.left {
+    left: 50px;
+
+    .phone_number {
+      color: yellow;
     }
 
     .social-icons {
@@ -46,16 +61,8 @@ $break-large: 1200px;
       }
     }
   }
-
-  &.left {
-    left: 50px;
-
-    .phone_number {
-      color: yellow;
-    }
-  }
   @media screen and (max-width: $break-medium) {
-    &.left, &.right  {
+    &.left  {
       display: none;
     }
   }

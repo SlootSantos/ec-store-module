@@ -1,19 +1,166 @@
 .checkout {
-  height: 100vh;
+  padding-bottom: 30px;
+
+  .header_title {
+    width: 95%;
+    padding-left: 2.5%;
+
+    font-size: 35px;
+  }
 
   &.content {
     display: flex;
 
-    form {
-      display: flex;
-      flex-flow: row wrap;
+    .form-wrapper {
       width: 50%;
+      margin: 50px;
 
-      input {
-        width: 50%;
+
+      h1, h2 {
+        padding-left: 2.5%;
+      }
+      input.checkout__show-dif-address {
+        margin-left: 2.5%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &.content {
+      display: block;
+
+      .form-wrapper {
+        width: 95%;
+        margin: 0;
+        // padding-left: 2.5%;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        &:first-child {
+          padding-bottom: 30px;
+        }
+      }
+    }
+
+    .btn.btn-primary {
+      margin-top: 30px;
+      width: 95%;
+      margin-left: 2.5%;
+    }
+  }
+
+  form, .sepa__form {
+    display: flex;
+    flex-flow: row wrap;
+
+    .checkout__input {
+      &.double {
         box-sizing: border-box;
         flex: 1;
         flex-basis: 50%;
+        padding: 10px 0;
+
+        input {
+          width: 90%;
+          height: 30px;
+          margin-left: 5%;
+        }
+
+        .input__title {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+
+      &.single {
+        box-sizing: border-box;
+        flex: 1;
+        flex-basis: 100%;
+        padding: 10px 0;
+        width: 50%;
+
+        input {
+          width: 95%;
+          height: 30px;
+          margin-left: 2.5%;
+        }
+
+        .input__title {
+          width: 95%;
+          margin-left: 2.5%;
+        }
+      }
+    }
+  }
+
+  .checkout__payment-provider {
+    margin-left: 2.5%;
+    .checkout__payment-provider-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px 0;
+
+      img {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .btn.btn-primary {
+    margin-left: 2.5%;
+  }
+
+
+
+
+  // PAYMENT FORMS
+  .checkout__payment {
+    h1 {
+      padding-left: 2.5%;
+
+    }
+    .sepa__form {
+      padding-left: 2.5%;
+      width: 30%;
+
+      border-top: 2px solid black;
+
+      .checkout__input {
+        &.double, &.single {
+          input, .input__title {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) { }
+    .sepa__form {
+      width: 95%;
+    }
+  }
+
+  .checkout__agreement {
+    width: 95%;
+    margin-left: 2.5%;
+
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  &.payment__success {
+    height: calc(100vh - 380px);
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    span {
+      &:first-of-type {
+        font-weight: bold;
       }
     }
   }

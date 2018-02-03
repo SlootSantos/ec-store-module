@@ -5,7 +5,6 @@ export const ADD_CART = 'ADD_CART';
 
 // export fetch products function
 export async function addToCart(prodId, quantity) {
-  console.log(quantity);
   let request;
 
   try {
@@ -13,10 +12,9 @@ export async function addToCart(prodId, quantity) {
   } catch (e) {
     request = e;
   } finally {
-
     return {
       type: ADD_CART,
       payload: request
-    }
+    };
   }
 }
