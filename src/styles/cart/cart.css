@@ -20,6 +20,8 @@
       padding: 10px 0; }
     .cart .cart__cart-table .table__details td {
       padding: 10px 0; }
+      .cart .cart__cart-table .table__details td.cart__delete {
+        cursor: pointer; }
   .cart .cart__cart-totals {
     width: 95%;
     padding-left: 2.5%;
