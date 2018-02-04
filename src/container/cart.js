@@ -89,6 +89,7 @@ class Cart extends Component {
                   <th>Preis</th>
                   <th>Anzahl</th>
                   <th>Gesamt</th>
+                  <th>Entfernen</th>
                 </tr>
 
                 { this.renderTable(this.props.cart) }
