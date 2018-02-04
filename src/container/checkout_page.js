@@ -221,7 +221,7 @@ class CheckoutPage extends Component {
                 <label htmlFor="paymentPaypal">
                   <img src={PaypalLogo} alt="" />
                 </label> <br />
-              </div> */}
+              </div>
 
               {/* <div className="checkout__payment-provider-wrapper">
                 <input id="paymentSepa" type="radio" className="checkout__show-dif-address" value="sepa" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
