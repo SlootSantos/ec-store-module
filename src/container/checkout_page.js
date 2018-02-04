@@ -210,12 +210,12 @@ class CheckoutPage extends Component {
           <form className="checkout__payment-provider">
             <div>
 
-              <div className="checkout__payment-provider-wrapper">
+              {/* <div className="checkout__payment-provider-wrapper">
                 <input id="paymentPaypal" type="radio" className="checkout__show-dif-address" value="paypal" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
                 <label htmlFor="paymentPaypal">
                   <img src={PaypalLogo} alt="" />
                 </label> <br />
-              </div>
+              </div> */}
 
               {/* <div className="checkout__payment-provider-wrapper">
                 <input id="paymentSepa" type="radio" className="checkout__show-dif-address" value="sepa" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
