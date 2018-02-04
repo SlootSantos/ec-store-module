@@ -66,6 +66,15 @@
         margin-left: 15px; }
   .checkout .btn.btn-primary {
     margin-left: 2.5%; }
+  .checkout .checkout__additional-info {
+    width: 95%;
+    padding-left: 2.5%; }
+    .checkout .checkout__additional-info textarea {
+      width: 50%;
+      height: 100px; }
+    @media screen and (max-width: 767px) {
+      .checkout .checkout__additional-info textarea {
+        width: 100%; } }
   .checkout .checkout__payment h1 {
     padding-left: 2.5%; }
   .checkout .checkout__payment .sepa__form {

@@ -79,7 +79,8 @@ class CheckoutPage extends Component {
         postcode: cd.postcode,
         country: 'DE'
       },
-      payment: paymentData
+      payment: paymentData,
+      additional: this.state.details
     };
 
     data.payment.amount_int = Math.round((this.props.cart.value.val_int) * 100) / 100;
@@ -204,6 +205,11 @@ class CheckoutPage extends Component {
 
         <OrderOverview cart={this.props.cart} />
 
+        <div className="checkout__additional-info">
+          <h3>Möchtest Du Deinen Kaffee in ganzen Bohnen oder gemahlen?*</h3>
+          <textarea placeholder="Espresso in Bohnen, Filterkaffee gemahlen..." onChange={e => this.setState({ details: e.target.value })}></textarea>
+        </div>
+
         <div className="checkout__payment">
           <h1>Bezahlung</h1>
 
@@ -241,7 +247,7 @@ class CheckoutPage extends Component {
           <input type="checkbox" className="checkout__show-dif-address" onClick={() => this.setState({ agreed: !this.state.agreed })} />
           <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/agb">Allgemeinen Geschäftsbedingungen</Link>, <Link to={Widerrufsformular} target="_blank">Widerrufsbestimmungen</Link> und <Link to={Datenschutz} target="_blank">Datenschutz</Link> einverstanden.</span>
         </div>
-        <button className={`btn btn-primary reverse ${!this.state.agreed ? 'disabled' : ''}`} disabled={!this.state.agreed} onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
+        <button className={`btn btn-primary reverse ${!this.state.agreed || !this.state.details ? 'disabled' : ''}`} disabled={!this.state.agreed || !this.state.details} onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>
     );
   }
