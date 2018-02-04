@@ -15,7 +15,7 @@ import CreditcartForm from '../components/payment_forms/credit-card_from';
 import PaymentOverlay from '../components/payment_overlay';
 import BackButton from '../components/back_button';
 
-import PaypalLogo from '../assets/paypal.png';
+// import PaypalLogo from '../assets/paypal.png';
 // import SepaLogo from '../assets/sepa.png';
 import CreditLogo from '../assets/creditcards.png';
 import Widerrufsformular from '../assets/Widerrufsformular.pdf';
