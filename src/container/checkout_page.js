@@ -15,7 +15,7 @@ import CreditcartForm from '../components/payment_forms/credit-card_from';
 import PaymentOverlay from '../components/payment_overlay';
 import BackButton from '../components/back_button';
 
-// import PaypalLogo from '../assets/paypal.png';
+import PaypalLogo from '../assets/paypal.png';
 // import SepaLogo from '../assets/sepa.png';
 import CreditLogo from '../assets/creditcards.png';
 import Widerrufsformular from '../assets/Widerrufsformular.pdf';
@@ -207,7 +207,7 @@ class CheckoutPage extends Component {
 
         <div className="checkout__additional-info">
           <h3>Möchtest Du Deinen Kaffee in ganzen Bohnen oder gemahlen?*</h3>
-          <textarea placeholder="Espresso in Bohnen, Filterkaffee gemahlen..." onChange={e => this.setState({ details: e.target.value })}></textarea>
+          <textarea placeholder="Espresso in Bohnen, Filterkaffee gemahlen..." onChange={e => this.setState({ details: e.target.value })} />
         </div>
 
         <div className="checkout__payment">
@@ -216,7 +216,7 @@ class CheckoutPage extends Component {
           <form className="checkout__payment-provider">
             <div>
 
-              {/* <div className="checkout__payment-provider-wrapper">
+              <div className="checkout__payment-provider-wrapper">
                 <input id="paymentPaypal" type="radio" className="checkout__show-dif-address" value="paypal" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
                 <label htmlFor="paymentPaypal">
                   <img src={PaypalLogo} alt="" />
@@ -228,7 +228,7 @@ class CheckoutPage extends Component {
                 <label htmlFor="paymentSepa">
                   <img src={SepaLogo} alt="" />
                 </label> <br />
-              </div> */}
+              </div>  */}
 
               <div className="checkout__payment-provider-wrapper">
                 <input id="paymentCredit" type="radio" className="checkout__show-dif-address" value="credit" name="payment" onClick={e => this.setState({ paymentType: e.target.value })} />
