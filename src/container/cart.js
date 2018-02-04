@@ -28,7 +28,7 @@ class Cart extends Component {
           <td>{ item.unit_price }</td>
           <td>{ item.quantity }</td>
           <td>{ item.value.amount }</td>
-          <td className="cart__delete" onClick={ () => this.deleteItem(item) }>X</td>
+          <td className="cart__delete" onClick={ () => this.deleteItem(item) }>x Entfernen</td>
         </tr>
       );
     }
