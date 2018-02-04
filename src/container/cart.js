@@ -35,7 +35,9 @@ class Cart extends Component {
 
   deleteItem(item) {
     this.props.updateCart(item.id, 0)
-    .then(this.props.getCart())
+    .then(res => {
+      this.props.getCart();
+    });
   }
 
   renderTotals(amount) {

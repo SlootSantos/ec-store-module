@@ -11,8 +11,7 @@
     height: 100%;
     text-align: center; }
   .product-page .product-page__image {
-    margin-left: 10%;
-    background: aliceblue; }
+    margin-left: 10%; }
     .product-page .product-page__image img {
       height: 600px;
       width: auto; }

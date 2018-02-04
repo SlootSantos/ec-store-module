@@ -23,7 +23,7 @@ function ProductDescription(props) {
         { bullets.map(i => <li key={i}>{ i }</li>) }
       </ul>
 
-      <button className={`btn btn-${loading ? 'primary' : 'secondary'}`} onClick={() => addToCart(id, 1)}>{loading ? 'einpacken…' : 'Add to Cart'}</button>
+      <button className={`btn btn-${loading ? 'primary' : 'secondary'}`} onClick={() => addToCart(id, 1)}>{loading ? 'einpacken…' : 'In den Einkaufswagen'}</button>
     </div>
   );
 }
