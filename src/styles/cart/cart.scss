@@ -33,6 +33,10 @@
     .table__details {
       td {
         padding: 10px 0;
+
+        &.cart__delete {
+          cursor: pointer;
+        }
       }
     }
   }

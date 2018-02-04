@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { getCart } from '../actions/get_cart';
+import { updateCart } from '../actions/update_cart';
 
 import BackButton from '../components/back_button';
 
@@ -27,9 +28,15 @@ class Cart extends Component {
           <td>{ item.unit_price }</td>
           <td>{ item.quantity }</td>
           <td>{ item.value.amount }</td>
+          <td className="cart__delete" onClick={ () => this.deleteItem(item) }>X</td>
         </tr>
       );
     }
+
+  deleteItem(item) {
+    this.props.updateCart(item.id, 0)
+    .then(this.props.getCart())
+  }
 
   renderTotals(amount) {
    return (
@@ -109,7 +116,7 @@ function mapStateToProps({ cart }) {
 
 // map dispatch to props
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCart }, dispatch);
+  return bindActionCreators({ getCart, updateCart }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

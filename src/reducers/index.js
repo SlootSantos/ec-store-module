@@ -6,6 +6,7 @@ import ProductSingleReducer from './product_single_reducer';
 // import CheckoutReducer from './checkout_reducer';
 import GetCartReducer from './get_cart_reducer';
 import AddCartReducer from './add_cart_reducer';
+import UpdateCartReducer from './update_cart_reducer';
 
 // el root reducer!
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   product: ProductSingleReducer,
   cart: GetCartReducer,
   // checkout: CheckoutReducer,
-  addProd: AddCartReducer
+  addProd: AddCartReducer,
+  updateProd: UpdateCartReducer
 });
 
 export default rootReducer;
