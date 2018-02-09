@@ -46,19 +46,31 @@ function FullPageTwo(props) {
         { prodDescription(products) }
       </div>
       <div className="disclaimer">
-        Jeweils 250g verfügbar <b>gemahlen</b> oder in <b>Bohnen</b>
+        Jeweils 250g verfügbar <b>gemahlen</b> oder in <b>Bohnen</b> <br />
+        Alle Preise inkl. Mehrwertsteuer.
       </div>
     </div>
   );
 }
+
+FullPageTwo.defaultProps = {
+      products: [{
+        name: 'test',
+        price: '000',
+        description: 'test',
+        imgSrc: '1234.img',
+        bullets: ['bullet']
+      }]
+  };
 
 FullPageTwo.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     price: PropTypes.string,
     description: PropTypes.string,
-    imgSrc: PropTypes.string
-  })).isRequired
+    imgSrc: PropTypes.string,
+    bullets: PropTypes.arrayOf(PropTypes.string)
+  }))
 };
 
 export default FullPageTwo;

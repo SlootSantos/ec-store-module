@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SNAPSHOT renders LandingPage correctily 1`] = `
+<div
+  className="main_container"
+>
+  <div
+    className="full_page fp__one"
+  >
+    <div
+      className="fp__one-layer"
+    >
+      <img
+        alt="V|O COFFEE"
+        src="vo_coffee_logo_white.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="full_page fp__mantra"
+  >
+    <div
+      className="mantra-wrapper"
+    >
+      <p>
+        Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. 
+        <br />
+        <br />
+        Für Updates folge uns auf unseren Social Media Kanälen und sei live dabei, wie wir wachsen und die Kaffeekultur verändern!
+      </p>
+      <div
+        className="social-icons"
+      >
+        <img
+          alt=""
+          onClick={[Function]}
+          src="facebook-logo.svg"
+        />
+        <img
+          alt=""
+          onClick={[Function]}
+          src="instagram-logo.svg"
+        />
+      </div>
+      <div
+        className="mantra-bullets"
+      >
+        <h2>
+          Warum V|O ?
+        </h2>
+        <ul>
+          <li>
+            Neue Lifestyle experience aus Vietnam
+          </li>
+          <li>
+            Authentischer und traditionell vietnamesischer Kaffee
+          </li>
+          <li>
+            Mehr Koffein als herkömmlicher Kaffee
+          </li>
+          <li>
+            Hohe Qualität
+          </li>
+          <li>
+            Andere Kaffeealternative
+          </li>
+          <li>
+            Einzigartiger Geschmack
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    className="full_page fp__two"
+  >
+    <div
+      className="item-wrapper"
+    >
+      <div
+        className="fp__two-item"
+      >
+        <div
+          className="item-image-wrap"
+        >
+          <img
+            alt=""
+            className="fp__two-item-image"
+            src="CaPhePhin.svg"
+          />
+        </div>
+        <div
+          className="item-text-wrap"
+        >
+          <h1>
+            Cà Phê Phin
+          </h1>
+          <b>
+            €8,90
+          </b>
+          <div
+            className="fp__two-item-description"
+          >
+            <p>
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Der <b>traditionell vietnamesische Kaffee</b> zeichnet sich durch seine starke Röstung aus, die dem Kaffee einen sehr kräftigen Geschmack gibt. Traditionell wird er mit gesüßter Kondensmilch auf Eis serviert, die die starke Röstung ausbalanciert und die Schokonoten der Bohnen hervorhebt und den Kaffee cremig macht.",
+                  }
+                }
+              />
+              <span
+                className="fp__two-bullet"
+              >
+                Kräftiges Aroma
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                Schokoladige Noten
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                70% Arabica, 30 % Robusta
+              </span>
+              <span
+                className="btn-wrapper"
+              >
+                <a
+                  className="btn btn-primary"
+                  href="/shop/Cà_Phê_Phin-256acf70-cd6f-4406-af71-5d52523ad329"
+                  onClick={[Function]}
+                >
+                  Jetzt Bestellen!
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fp__two-item"
+      >
+        <div
+          className="item-image-wrap"
+        >
+          <img
+            alt=""
+            className="fp__two-item-image"
+            src="FrenchPress.svg"
+          />
+        </div>
+        <div
+          className="item-text-wrap"
+        >
+          <h1>
+            Thanh Trúc
+          </h1>
+          <b>
+            €12,90
+          </b>
+          <div
+            className="fp__two-item-description"
+          >
+            <p>
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Unser <b>Filterkaffee</b> ist ein sortenreiner Kaffee aus 100% Bourbon Bohnen, eine sehr edle Sorte von Arabica Bohnen. Bourbon Bohnen sind bekannt dafür, dass sie eine feine komplexe Säurestruktur haben, die den Kaffee bekömmlich und fein machen.",
+                  }
+                }
+              />
+              <span
+                className="fp__two-bullet"
+              >
+                Ausgewogenge, geringe Säure
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                Feiner und milder Kaffee
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                100% Bourbon Arabica
+              </span>
+              <span
+                className="btn-wrapper"
+              >
+                <a
+                  className="btn btn-primary"
+                  href="/shop/Thanh_Trúc-85e048e5-b4f1-49a5-a466-d52b01646729"
+                  onClick={[Function]}
+                >
+                  Jetzt Bestellen!
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="fp__two-item"
+      >
+        <div
+          className="item-image-wrap"
+        >
+          <img
+            alt=""
+            className="fp__two-item-image"
+            src="Espresso.svg"
+          />
+        </div>
+        <div
+          className="item-text-wrap"
+        >
+          <h1>
+            Dình Huy
+          </h1>
+          <b>
+            €10,90
+          </b>
+          <div
+            className="fp__two-item-description"
+          >
+            <p>
+              <span
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Der <b>Espressokaffee</b> hat einen hohen Arabica Anteil, was dem Kaffee fruchtige Aromen verleiht. Da der vietnamesische Kaffee meist einen höheren Koffeinanteil hat, ist der Kaffee sehr kräftig und hat trotzdem eine wunderbare Crema.",
+                  }
+                }
+              />
+              <span
+                className="fp__two-bullet"
+              >
+                Fruchtige Säure
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                Crema
+              </span>
+              <span
+                className="fp__two-bullet"
+              >
+                90% Arabica, 10% Robusta
+              </span>
+              <span
+                className="btn-wrapper"
+              >
+                <a
+                  className="btn btn-primary"
+                  href="/shop/Dình_Huy-ed0ee098-d5ba-409d-b2f4-c9610feca4b4"
+                  onClick={[Function]}
+                >
+                  Jetzt Bestellen!
+                </a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="disclaimer"
+    >
+      Jeweils 250g verfügbar 
+      <b>
+        gemahlen
+      </b>
+       oder in 
+      <b>
+        Bohnen
+      </b>
+    </div>
+  </div>
+  <div
+    className="full_page fp__three"
+  >
+    <div
+      className="fp__three-headline"
+    >
+      <h1>
+        V | O Crew
+      </h1>
+      <h4>
+        Wir ♡ Kaffee
+      </h4>
+    </div>
+    <div
+      className="fp__three-introduction"
+    >
+      <p>
+        <b>
+          V|O Coffee
+        </b>
+         wurde im Sommer 2016 von Petra gegründet. Als einer der ersten Online-Anbieter für vietnamesischen Kaffee in Deutschland wollen wir unsere Liebe für Kaffee mit euch teilen und die Kaffeekultur in Deutschland bereichern.
+        <br />
+        <br />
+        Seit der Gründung sind wir als Team gewachsen und arbeiten im Kernteam zu viert an dem Start-Up. Erste Erfolge konnten wir auch schon verzeichnen. Denn bei dem Rhein-Neckar-Start-Up-Weekend konnten wir uns den 3. Platz sichern und haben schon bei diversen Marketing-Events unseren Kaffee erfolgreich angeboten. Dabei wollen wir es natürlich nicht belassen, sondern noch viel mehr erreichen!
+      </p>
+    </div>
+    <div
+      className="fp__three-item-wrapper"
+    >
+      <div
+        className="fp__three-items"
+      >
+        <div
+          className="fp__three-items"
+        >
+          <div
+            className="fp__three-item-bubble outter"
+          >
+            <div
+              className="fp__three-item-bubble inner"
+            >
+              <img
+                alt="showing"
+                src="petra_web.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="description"
+        >
+          <h1>
+            Petra
+          </h1>
+          <h4>
+            The Chaperone
+          </h4>
+          <p
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Petra ist die Gründerin von V|O Coffee. Bereits vor ihrer Gründung war sie selbstständig und hat neben ihrem Englisch und BWL Studium an der Uni Mannheim viel im Sales und Merchandising Bereich gearbeitet. Als zertifizierte Barista ist ihr die Qualität bei Kaffee besonders wichtig. <br />Mit <b>V|O Coffee</b> kann sie nun ihre Kaffeeliebe und ein Stück ihrer vietnamesischen Kultur mit euch teilen.",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="fp__three-items"
+      >
+        <div
+          className="fp__three-items"
+        >
+          <div
+            className="fp__three-item-bubble outter"
+          >
+            <div
+              className="fp__three-item-bubble inner"
+            >
+              <img
+                alt="showing"
+                src="leo_web.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="description"
+        >
+          <h1>
+            Leo
+          </h1>
+          <h4>
+            The Accountant
+          </h4>
+          <p
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Wenn es um kaufmännische Entscheidungen geht, dann ist Leo unser Mann. Vor V|O Coffee hat er Akkreditivgeschäfte der BASF am Standort Hong Kong betreut und studiert jetzt Unternehmensjura an der Uni Mannheim.<br />Bei <b>V|O Coffee</b> ist er dabei, weil er an das Produkt glaubt und Petras Leidenschaft zu V|O ihn überzeugt hat.",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="fp__three-items"
+      >
+        <div
+          className="fp__three-items"
+        >
+          <div
+            className="fp__three-item-bubble outter"
+          >
+            <div
+              className="fp__three-item-bubble inner"
+            >
+              <img
+                alt="showing"
+                src="philipp_web.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="description"
+        >
+          <h1>
+            Philipp
+          </h1>
+          <h4>
+            The Creator
+          </h4>
+          <p
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Philipp ist der Kreative bei V|O und arbeitet als digitaler Mediendesigner in einer Werbeagentur. Durch sein Ehrenamt hat er ein Jahr in Vietnam gelebt, wo er das erste Mal den vietnamesischen Kaffee kennenlernte. <br />Durch <b>V|O Coffee</b> möchte er daran mitwirken, diesen auch in Deutschland bekannter zu machen und die Kaffeelandschaft zu bereichern.",
+              }
+            }
+          />
+        </div>
+      </div>
+      <div
+        className="fp__three-items"
+      >
+        <div
+          className="fp__three-items"
+        >
+          <div
+            className="fp__three-item-bubble outter"
+          >
+            <div
+              className="fp__three-item-bubble inner"
+            >
+              <img
+                alt="showing"
+                src="flo_square.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="description"
+        >
+          <h1>
+            Flo
+          </h1>
+          <h4>
+            The Nerd
+          </h4>
+          <p
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Flo ist unser IT-Guru. Schon in jungen Jahren hat er sich für das Coding interessiert. Heute arbeitet er als Freelancer im Software Engineering und hat u.a. bei Volkswagen, E.ON und AboutYou gearbeitet. Wie jeder andere Nerd auch ist Flo ein Kaffeetrinker. <br />Bei <b>V|O Coffee</b> kann er seine zwei größten Lieben vereinen.",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

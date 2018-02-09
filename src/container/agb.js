@@ -43,7 +43,7 @@ class AGB extends Component {
           • Auswahl des Angebots in der gewünschten Spezifikation (Größe, Farbe,
           Anzahl) <br />
           • Einlegen des Angebots in den Warenkorb <br />
-          • Betätigen des Buttons 'bestellen' <br />
+          • Betätigen des Buttons 'Kaufen' <br />
           • Eingabe der Rechnungs- und Lieferadresse <br />
           • Auswahl der Bezahlmethode <br />
           • Überprüfung und Bearbeitung der Bestellung und aller Eingaben <br />
@@ -190,7 +190,7 @@ class AGB extends Component {
           Eigenschaften und Funktionsweise der Waren nicht notwendigen
           Umgang mit ihnen zurückzuführen ist. <br />
           Ende der Widerrufsbelehrung
-        </b><br /> <br />
+          </b><br /> <br />
 
           Sie erreichen unseren Kundendienst zu folgenden Zeiten unter: <br />
           V|O Trading <br />

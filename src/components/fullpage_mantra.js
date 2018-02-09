@@ -9,7 +9,7 @@ function FullPageMantra() {
     <div className="full_page fp__mantra">
       <div className="mantra-wrapper">
         <p>
-          Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. <br/><br/>
+          Wenn Du gerne ein Stück von Vietnam und der Tradition des Landes in Deutschland erleben möchtest, probiere den vietnamesischen Kaffee und erlebe „Vietnam In A Cup“. <br /><br />
           Für Updates folge uns auf unseren Social Media Kanälen und sei live dabei, wie wir wachsen und die Kaffeekultur verändern!
         </p>
 
@@ -19,7 +19,7 @@ function FullPageMantra() {
           <h2>Warum V|O ?</h2>
           <ul>
             <li>
-              Neue Lifestyle experience aus Vietnam
+              Neue Lifestyle Experience aus Vietnam
             </li>
             <li>
               Authentischer und traditionell vietnamesischer Kaffee
@@ -46,15 +46,15 @@ function FullPageMantra() {
 function renderIcons() {
   return (
     <div className="social-icons">
-      <img onClick={ () => goToSocialMedia('https://facebook.com/vocoffeede') } src={facebook} alt=""/>
-      <img onClick={ () => goToSocialMedia('https://www.instagram.com/vo.coffee') } src={instagram} alt=""/>
+      <img onClick={() => goToSocialMedia('https://facebook.com/vocoffeede')} src={facebook} alt="" />
+      <img onClick={() => goToSocialMedia('https://www.instagram.com/vo.coffee')} src={instagram} alt="" />
     </div>
-  )
-};
+  );
+}
 
 function goToSocialMedia(link) {
   window.open(link);
-};
+}
 
 
 export default FullPageMantra;
