@@ -15,53 +15,52 @@ import '../styles/cart/cart.css';
 
 class Cart extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.props.getCart();
+  }
+
+  deleteItem(item) {
+    this.props.updateCart(item.id, 0)
+    .then((res) => {
+      this.props.getCart();
+    });
   }
 
   renderTable(elements) {
     return elements.items
       .map(item =>
-        <tr key={item.id} className="table__details">
+        (<tr key={item.id} className="table__details">
           <td>{ item.name }</td>
           <td>{ item.unit_price }</td>
           <td>{ item.quantity }</td>
           <td>{ item.value.amount }</td>
-          <td className="cart__delete" onClick={ () => this.deleteItem(item) }>x Entfernen</td>
-        </tr>
-      );
+          <td className="cart__delete" onClick={() => this.deleteItem(item)}>x Entfernen</td>
+         </tr>));
     }
-
-  deleteItem(item) {
-    this.props.updateCart(item.id, 0)
-    .then(res => {
-      this.props.getCart();
-    });
-  }
 
   renderTotals(amount) {
    return (
-    <div className="cart__cart-totals">
-      <table>
-        <tbody>
-          <tr>
-            <th>Waren</th>
-            <td>{ amount.amount }</td>
-          </tr>
+     <div className="cart__cart-totals">
+       <table>
+         <tbody>
+           <tr>
+             <th>Waren</th>
+             <td>{ amount.amount }</td>
+           </tr>
 
-          <tr>
-            <th>Shipping</th>
-            <td>{ amount.amount }</td>
-          </tr>
+           <tr>
+             <th>Shipping</th>
+             <td>{ amount.amount }</td>
+           </tr>
 
-          <tr>
-            <th>Gesamt</th>
-            <td>{ amount.amount }</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+           <tr>
+             <th>Gesamt</th>
+             <td>{ amount.amount }</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
     );
   }
 

@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ProductDescription(props) {
-  const quantity = '250g';
   const { addToCart, product, loading } = props;
   const {
     description,
     name,
     id,
     price,
-    bullets
+    bullets,
+    quantity
   } = product;
   const formattedPrice = `${price} / ${quantity}`;
 
@@ -34,6 +34,7 @@ ProductDescription.propTypes = {
     description: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.string,
+    quantity: PropTypes.string
   }).isRequired,
   loading: PropTypes.bool.isRequired
 };
