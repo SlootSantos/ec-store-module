@@ -43,6 +43,6 @@
     "build": "npm run build-css && react-scripts build",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "test": "exiot 0"
+    "test": "exit 0"
   }
 }
