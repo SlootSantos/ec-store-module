@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import PropTypes from 'prop-types';
+
 import { getCart } from '../actions/get_cart';
 import { updateCart } from '../actions/update_cart';
 
@@ -20,24 +22,49 @@ class Cart extends Component {
     this.props.getCart();
   }
 
-  deleteItem(item) {
-    this.props.updateCart(item.id, 0)
-    .then((res) => {
+  componentWillMount() {
+    this.state = {
+      deleteNumber: 1
+    };
+  }
+
+  onNumberChange({ target: { value } }) {
+    this.setState({
+      deleteNumber: parseInt(value, 10)
+    });
+  }
+
+  deleteItem({ id, quantity }, deleteNumber) {
+    const newQuantity = quantity - deleteNumber < 0
+    ? 0
+    : quantity - deleteNumber;
+
+    this.props.updateCart(id, newQuantity)
+    .then(() => {
       this.props.getCart();
     });
   }
 
   renderTable(elements) {
-    return elements.items
-      .map(item =>
-        (<tr key={item.id} className="table__details">
-          <td>{ item.name }</td>
-          <td>{ item.unit_price }</td>
-          <td>{ item.quantity }</td>
-          <td>{ item.value.amount }</td>
-          <td className="cart__delete" onClick={() => this.deleteItem(item)}>x Entfernen</td>
-         </tr>));
-    }
+  return elements.items.map(item => (
+    <tr key={item.id} className="table__details">
+      <td>{item.name}</td>
+      <td>{item.unit_price}</td>
+      <td>{item.quantity}</td>
+      <td>{item.value.amount}</td>
+      <td className="cart__delete">
+        <input
+          type="number"
+          min="1"
+          max={item.quantity}
+          value={this.state.deleteNumber}
+          onChange={e => this.onNumberChange(e)}
+        />
+        <span onClick={() => this.deleteItem(item, this.state.deleteNumber)}> x Entfernen</span>
+      </td>
+    </tr>
+  ));
+}
 
   renderTotals(amount) {
    return (
@@ -106,6 +133,22 @@ class Cart extends Component {
     );
   }
 }
+
+Cart.propTypes = {
+  cart: PropTypes.shape({
+    versand_kosten: PropTypes.string,
+    items: PropTypes.array
+  }),
+  updateCart: PropTypes.func.isRequired,
+  getCart: PropTypes.func.isRequired
+};
+
+Cart.defaultProps = {
+  cart: PropTypes.shape({
+    versand_kosten: '4,99',
+    items: 0
+  })
+};
 
 
 // map state to props

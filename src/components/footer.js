@@ -16,7 +16,7 @@ function Footer() {
         <img src={Logo} alt="" />
       </div>
       <div className="content">
-        <h1>V|O Trading UG</h1>
+        <h1>V|O Trading UG (haftungsbeschränkt)</h1>
         <b>Petra Vo</b><br /><br />
         <span>Rheinhäuserstr.12</span><br />
         <span>68165 Mannheim</span><br />

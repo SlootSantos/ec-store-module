@@ -164,7 +164,7 @@
         .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h1, .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description h4 {
           margin: 0; }
         .full_page.fp__three .fp__three-item-wrapper .fp__three-items .description p {
-          text-align: left; }
+          text-align: center; }
       .full_page.fp__three .fp__three-item-wrapper .fp__three-items .fp__three-item-bubble {
         display: flex;
         justify-content: center;
