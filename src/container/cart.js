@@ -23,9 +23,9 @@ class Cart extends Component {
   }
 
   componentWillMount() {
-    this.state = {
+    this.setState({
       deleteNumber: 1
-    };
+    });
   }
 
   onNumberChange({ target: { value } }) {

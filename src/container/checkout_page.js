@@ -18,7 +18,6 @@ import BackButton from '../components/back_button';
 import PaypalLogo from '../assets/paypal.png';
 // import SepaLogo from '../assets/sepa.png';
 import CreditLogo from '../assets/creditcards.png';
-import Widerrufsformular from '../assets/Widerrufsformular.pdf';
 import Datenschutz from '../assets/datenschutz.pdf';
 
 
@@ -245,7 +244,7 @@ class CheckoutPage extends Component {
 
         <div className="checkout__agreement">
           <input type="checkbox" className="checkout__show-dif-address" onClick={() => this.setState({ agreed: !this.state.agreed })} />
-          <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/agb">Allgemeinen Geschäftsbedingungen</Link>, <Link to={Widerrufsformular} target="_blank">Widerrufsbestimmungen</Link> und <Link to={Datenschutz} target="_blank">Datenschutz</Link> einverstanden.</span>
+          <span>&nbsp;Mit deiner Bestellung erklärst du dich mit unseren <Link to="/agb">Allgemeinen Geschäftsbedingungen</Link>, <Link to="/widerruf" target="_blank">Widerrufsbelehrung</Link> und <Link to={Datenschutz} target="_blank">Datenschutz</Link> einverstanden.</span>
         </div>
         <button className={`btn btn-primary reverse ${!this.state.agreed || !this.state.details ? 'disabled' : ''}`} disabled={!this.state.agreed || !this.state.details} onClick={() => this.createCheckoutObject()}>Kostenpflichtig bestellen</button>
       </div>

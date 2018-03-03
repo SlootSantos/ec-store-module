@@ -39,4 +39,8 @@
   padding-left: 2.5%;
 
   padding-bottom: 30px;
+
+  &.widerruf {
+    min-height: calc(100vh - 390px);
+  }
 }

@@ -10,6 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { LandingPage } from './container/landing_page';
 import Impressum from './container/impressum';
 import AGB from './container/agb';
+import Widerruf from './components/widerrufsbelehrung';
 import ProductPage from './container/product_page';
 import CheckoutPage from './container/checkout_page';
 import Cart from './container/cart';
@@ -39,6 +40,7 @@ ReactDOM.render(
           <Switch>
             <Route path="/agb" component={AGB} />
             <Route path="/impressum" component={Impressum} />
+            <Route path="/widerruf" component={Widerruf} />
             <Route path="/shop/checkout/success" component={CheckoutSuccess} />
             <Route path="/shop/checkout/fail" component={CheckoutFail} />
             <Route path="/shop/checkout/pp/success" component={PP} />
