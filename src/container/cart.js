@@ -22,22 +22,15 @@ class Cart extends Component {
     this.props.getCart();
   }
 
-  componentWillMount() {
-    this.setState({
-      deleteNumber: 1
-    });
-  }
-
   onNumberChange({ target: { value } }) {
-    this.setState({
-      deleteNumber: parseInt(value, 10)
-    });
+    return parseInt(value, 10);
   }
 
-  deleteItem({ id, quantity }, deleteNumber) {
-    const newQuantity = quantity - deleteNumber < 0
+  deleteItem({ id, quantity, deleteNumber = 1 }) {
+    const diffInt = parseInt(quantity, 10) - deleteNumber;
+    const newQuantity = diffInt < 0
     ? 0
-    : quantity - deleteNumber;
+    : diffInt;
 
     this.props.updateCart(id, newQuantity)
     .then(() => {
@@ -57,10 +50,11 @@ class Cart extends Component {
           type="number"
           min="1"
           max={item.quantity}
-          value={this.state.deleteNumber}
-          onChange={e => this.onNumberChange(e)}
+          value={item.deleteNumber}
+          defaultValue="1"
+          onChange={((e) => { item.deleteNumber = this.onNumberChange(e) })}
         />
-        <span onClick={() => this.deleteItem(item, this.state.deleteNumber)}> x Entfernen</span>
+        <span onClick={() => this.deleteItem(item)}> x Entfernen</span>
       </td>
     </tr>
   ));
