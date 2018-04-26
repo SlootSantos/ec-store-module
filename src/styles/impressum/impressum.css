@@ -23,3 +23,5 @@
   width: 95%;
   padding-left: 2.5%;
   padding-bottom: 30px; }
+  .AGB.widerruf {
+    min-height: calc(100vh - 390px); }

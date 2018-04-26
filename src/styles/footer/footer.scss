@@ -11,10 +11,14 @@ $primaryColor10: rgba(72,45,42,.1);
   align-items: center;
 
 
-  height: 300px;
-  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
   background: #373737;
   bottom: 0;
+
+  padding: 20px 0;
 
   color: white;
   border-top: 1px solid white;
@@ -28,6 +32,7 @@ $primaryColor10: rgba(72,45,42,.1);
 
       img {
         max-height: 100%;
+        width: 30%;
       }
     }
 
@@ -47,6 +52,7 @@ $primaryColor10: rgba(72,45,42,.1);
       h1, span, b {
         width: 60%;
         padding-left: 20%;
+        word-break: break-word;
 
         &.block {
           display: block;
@@ -59,6 +65,7 @@ $primaryColor10: rgba(72,45,42,.1);
   @media screen and (max-width: $break-medium) {
     img {
       height: 70%;
+      width: 50%;
     }
 
     div.content {

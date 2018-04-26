@@ -26,14 +26,25 @@ class ProductPage extends Component {
     let { fetchSingleProduct, match: { params } } = this.props;
 
     fetchSingleProduct(params.id);
+  }
 
-    this.state = {
-      loading: false
-    };
+  componentWillMount() {
+    this.setState({
+      loading: false,
+      quantityNumber: 1
+    });
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
+  }
+
+  onNumberChange({ target: { value } }) {
+    const intVal = parseInt(value, 10);
+
+    this.setState({
+      quantityNumber: intVal > 10 ? 10 : intVal
+    });
   }
 
   addProducts(id, quant) {
@@ -41,7 +52,7 @@ class ProductPage extends Component {
       loading: true
     });
 
-    this.props.addToCart(id, quant)
+    this.props.addToCart(id, (quant || 1))
     .then(() => {
       this.setState({
         loading: false
@@ -65,6 +76,8 @@ class ProductPage extends Component {
             product={product}
             loading={this.state.loading}
             addToCart={this.addProducts.bind(this)}
+            quantityNumber={this.state.quantityNumber}
+            onNumberChange={this.onNumberChange.bind(this)}
           />
         </div>
       </div>

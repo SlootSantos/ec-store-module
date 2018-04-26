@@ -45,6 +45,11 @@ $primaryColor10: rgba(72,45,42,.1);
       list-style-type: none;
     }
 
+    .product-page__quantity {
+      padding-left: 0%;
+      width: fit-content;
+    }
+
     .btn {
       margin-top: 50px;
 
@@ -77,9 +82,19 @@ $primaryColor10: rgba(72,45,42,.1);
         width: 90%;
         padding-left: 5%;
       }
+
       ul {
-      padding-left: 5% !important;
+        padding-left: 5% !important;
         text-align: left;
+      }
+
+      .product-page__quantity {
+        padding-left: 5% !important;
+        text-align: left;
+
+        input {
+          text-align: center;
+        }
       }
     }
 
