@@ -7,37 +7,34 @@ import '../styles/button/button.css';
 
 function prodDescription(products) {
   return products.map(prod => (
-    <div key={prod.name} className="fp__two-item">
-      <div className="item-image-wrap">
-        <img className="fp__two-item-image" src={prod.imgSrc} alt="" />
-      </div>
-
-      <div className="item-text-wrap">
-        <h1>{prod.name}</h1>
-        <b>{prod.price}</b>
-
-        <div className="fp__two-item-description">
-          <p>
-            {/* TODO: GOOD LORD CHANGE THIS ASAP! */}
-            <span dangerouslySetInnerHTML={{ __html: prod.description }} />
-            {prod.bullets.map(bull => (
-              <span className="fp__two-bullet" key={bull}>
-                {bull}
-              </span>
-            ))}
-            <span className="btn-wrapper">
-              <Link
-                className="btn btn-primary"
-                to={{
-                  pathname: `/shop/${prod.name.split(' ').join('_')}-${prod.id}`
-                }}
-              >
-                Jetzt Bestellen!
-              </Link>
-              {/* <a className="btn btn-primary"
-                href={`mailto:info@vo-coffee.de?subject=Bestellung ${prod.name}`}>Bestellen!</a> */}
+    <div key={prod.name} className="fp__two_redesign_product_wrapper">
+      <div className="fp__two_redesign_product" key={prod.name}>
+        <div className="fp__two_redesign_product_img">
+          <h1>{prod.name}</h1>
+          <img src={prod.imgSrc} alt="" />
+        </div>
+        <div className="fp__two_redesign_product_text">
+          <span dangerouslySetInnerHTML={{ __html: prod.description }} />
+        </div>
+        <div className="fp__two_redesign_product_details">
+          <div className="fp__two_redesign_product_details_price">
+            <span>250g</span>
+            <span>
+              <h3>
+                <b>{prod.price}</b>
+              </h3>
             </span>
-          </p>
+          </div>
+          <div className="fp__two_redesign_product_details_button">
+            <Link
+              className="btn redesign"
+              to={{
+                pathname: `/shop/${prod.name.split(' ').join('_')}-${prod.id}`
+              }}
+            >
+              Jetzt Bestellen!
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -52,43 +49,7 @@ function FullPageTwo(props) {
       <div className="fp__two_redesign">
         <h1>Unsere Kaffees</h1>
         <div className="fp__two_redesign_container">
-          {products.map(prod => (
-            <div key={prod.name} className="fp__two_redesign_product_wrapper">
-              <div className="fp__two_redesign_product" key={prod.name}>
-                <div className="fp__two_redesign_product_img">
-                  <h1>{prod.name}</h1>
-                  <img src={prod.imgSrc} alt="" />
-                </div>
-                <div className="fp__two_redesign_product_text">
-                  <span
-                    dangerouslySetInnerHTML={{ __html: prod.description }}
-                  />
-                </div>
-                <div className="fp__two_redesign_product_details">
-                  <div className="fp__two_redesign_product_details_price">
-                    <span>250g</span>
-                    <span>
-                      <h3>
-                        <b>{prod.price}</b>
-                      </h3>
-                    </span>
-                  </div>
-                  <div className="fp__two_redesign_product_details_button">
-                    <Link
-                      className="btn redesign"
-                      to={{
-                        pathname: `/shop/${prod.name.split(' ').join('_')}-${
-                          prod.id
-                        }`
-                      }}
-                    >
-                      Jetzt Bestellen!
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+          {prodDescription(products)}
         </div>
       </div>
       {/* <div className="item-wrapper">{prodDescription(products)}</div>

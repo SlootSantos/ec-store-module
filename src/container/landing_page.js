@@ -9,8 +9,8 @@ import FullPageMantra from '../components/fullpage_mantra';
 import Espresso from '../assets/Espresso_white.svg';
 import Classic from '../assets/CaPhePhin_white.svg';
 import Filter from '../assets/FrenchPress_white.svg';
-import VietFilter from '../assets/viet.Filter.svg';
-import Milk from '../assets/milk.svg';
+// import VietFilter from '../assets/viet.Filter.svg';
+// import Milk from '../assets/milk.svg';
 
 import '../styles/landingpage/landing_page.css';
 
