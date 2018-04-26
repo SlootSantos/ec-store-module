@@ -4,7 +4,6 @@ import '../styles/fullpage/fullpage.css';
 
 import Logo from '../assets/vo_coffee_logo_white.svg';
 
-
 function FullpageOne() {
   return (
     <div className="full_page fp__one">
