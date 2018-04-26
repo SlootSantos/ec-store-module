@@ -39,6 +39,8 @@ function ProductDescription(props) {
 
 ProductDescription.propTypes = {
   addToCart: PropTypes.func.isRequired,
+  onNumberChange: PropTypes.func.isRequired,
+  quantityNumber: PropTypes.number.isRequired,
   product: PropTypes.shape({
     description: PropTypes.string,
     name: PropTypes.string,

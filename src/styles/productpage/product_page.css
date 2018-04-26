@@ -24,6 +24,9 @@
     .product-page .product-page__description ul {
       padding-left: 0;
       list-style-type: none; }
+    .product-page .product-page__description .product-page__quantity {
+      padding-left: 0%;
+      width: fit-content; }
     .product-page .product-page__description .btn {
       margin-top: 50px; }
       .product-page .product-page__description .btn.loading {
@@ -48,5 +51,10 @@
         .product-page .product-page__description ul {
           padding-left: 5% !important;
           text-align: left; }
+        .product-page .product-page__description .product-page__quantity {
+          padding-left: 5% !important;
+          text-align: left; }
+          .product-page .product-page__description .product-page__quantity input {
+            text-align: center; }
       .product-page .btn {
         margin-bottom: 50px; } }
