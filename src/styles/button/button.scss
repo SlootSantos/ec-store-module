@@ -1,8 +1,9 @@
-$primaryColor: rgba(72,45,42,1);
-$primaryColor80: rgba(72,45,42,.8);
-$primaryColor50: rgba(72,45,42,.5);
-$primaryColor10: rgba(72,45,42,.1);
+$primaryColor: rgba(72, 45, 42, 1);
+$primaryColor80: rgba(72, 45, 42, 0.8);
+$primaryColor50: rgba(72, 45, 42, 0.5);
+$primaryColor10: rgba(72, 45, 42, 0.1);
 $secondaryColor: #c6c8ca;
+$pageSecondaryColor: #373737;
 
 .btn {
   cursor: pointer;
@@ -20,24 +21,56 @@ $secondaryColor: #c6c8ca;
   position: relative;
   outline: 0;
   line-height: 21px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-weight: 600;
   text-transform: uppercase;
   box-sizing: border-box;
   margin: 0;
-  -webkit-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
-  -moz-transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
-  transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
   font-size: 11px;
   padding: 12px 32px;
 
-  &:active, &:hover {
+  &:active,
+  &:hover {
     color: white;
     background: $secondaryColor;
   }
 
-  &.btn-primary {
+  &.redesign {
+    color: #00d499;
+    border-color: #00d499;
+    background: $pageSecondaryColor;
 
+    &:hover {
+      color: $pageSecondaryColor;
+      background: #00d499;
+    }
+  }
+
+  &.redesign-white {
+    color: #00d499;
+    border-color: #00d499;
+    background: white;
+
+    &:hover {
+      color: white;
+      border-color: #00d499;
+      background: #00d499;
+    }
+  }
+
+  &.redesign-secondary {
+    color: white;
+    border-color: #00d499;
+    background: #00d499;
+  }
+
+  &.btn-primary {
     &.reverse {
       color: white;
       background: $secondaryColor;
@@ -60,7 +93,7 @@ $secondaryColor: #c6c8ca;
   }
 
   &.disabled {
-    opacity: .5;
+    opacity: 0.5;
     color: white;
     background: $secondaryColor;
 
