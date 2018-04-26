@@ -370,7 +370,7 @@
             background: white; }
         .full_page.fp__three .fp__three_redesign .fp__three_redesign_item_wrapper .fp__three_redesign_items .fp__three_redesign_items_content {
           height: fit-content;
-          min-height: -webkit-fill-available;
+          min-height: stretch;
           padding: 0 10px; }
           .full_page.fp__three .fp__three_redesign .fp__three_redesign_item_wrapper .fp__three_redesign_items .fp__three_redesign_items_content .fp__three_redesign_items_image {
             padding-top: 10px;

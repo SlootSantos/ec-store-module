@@ -579,7 +579,7 @@ $redesignSecondaryColor: #a0a0a0;
 
           .fp__three_redesign_items_content {
             height: fit-content;
-            min-height: -webkit-fill-available;
+            min-height: stretch;
 
             padding: 0 10px;
             .fp__three_redesign_items_image {
