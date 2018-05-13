@@ -2,8 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ProductDescription(props) {
-  const { addToCart, product, loading, onNumberChange, quantityNumber } = props;
-  const { description, name, id, price, bullets, quantity } = product;
+  const {
+ addToCart, product, loading, onNumberChange, quantityNumber
+} = props;
+  const {
+    description,
+    name,
+    id,
+    price,
+    bullets,
+    quantity,
+    mwst,
+    delivery,
+    availableInfo
+  } = product;
   const formattedPrice = `${price} / ${quantity}`;
 
   return (
@@ -12,19 +24,22 @@ function ProductDescription(props) {
       <span>
         <b>{formattedPrice}</b>
       </span>
+      <p>inkl. {mwst} MwSt. zzgl. Versandkosten</p>
+      <p>Lieferzeit: {delivery}</p>
+      <br />
+
       <p dangerouslySetInnerHTML={{ __html: description }} />
 
       <ul>{bullets.map(i => <li key={i}>{i}</li>)}</ul>
 
       <div className="product-page__quantity">
+        {availableInfo && (
+          <p className="product-page__quantity_unavailable">
+            Die {availableInfo.toLowerCase()} Variante ist <b>ausverkauft</b>
+          </p>
+        )}
         <b>Anzahl: </b>
-        <input
-          type="number"
-          min="1"
-          max="10"
-          value={quantityNumber}
-          onChange={onNumberChange}
-        />
+        <input type="number" min="1" max="10" value={quantityNumber} onChange={onNumberChange} />
       </div>
 
       <button
