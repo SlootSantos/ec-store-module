@@ -1,9 +1,9 @@
 $break-small: 400px;
 $break-medium: 767px;
 $break-large: 1200px;
-$primaryColor: rgba(72,45,42,1);
-$primaryColor50: rgba(72,45,42,.5);
-$primaryColor10: rgba(72,45,42,.1);
+$primaryColor: rgba(72, 45, 42, 1);
+$primaryColor50: rgba(72, 45, 42, 0.5);
+$primaryColor10: rgba(72, 45, 42, 0.1);
 
 .product-page_wrap {
   min-height: calc(100vh - 350px);
@@ -15,7 +15,8 @@ $primaryColor10: rgba(72,45,42,.1);
   justify-content: center;
   align-items: center;
 
-  .product-page__description, .product-page__image {
+  .product-page__description,
+  .product-page__image {
     width: 50%;
     height: 100%;
     text-align: center;
@@ -25,7 +26,7 @@ $primaryColor10: rgba(72,45,42,.1);
     margin-left: 10%;
 
     img {
-      height: 600px;
+      height: 500px;
       width: auto;
     }
   }
@@ -48,6 +49,10 @@ $primaryColor10: rgba(72,45,42,.1);
     .product-page__quantity {
       padding-left: 0%;
       width: fit-content;
+
+      .product-page__quantity_unavailable {
+        color: #00d499;
+      }
     }
 
     .btn {
@@ -63,7 +68,8 @@ $primaryColor10: rgba(72,45,42,.1);
   @media screen and (max-width: $break-medium) {
     display: grid;
 
-    .product-page__description, .product-page__image {
+    .product-page__description,
+    .product-page__image {
       width: 100%;
       height: 100%;
       text-align: center;
