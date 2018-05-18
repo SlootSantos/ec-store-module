@@ -98,6 +98,7 @@
       padding-left: 30px; } }
 
 .full_page.fp__two {
+  min-height: fit-content;
   display: block;
   text-align: center; }
   .full_page.fp__two .disclaimer {
