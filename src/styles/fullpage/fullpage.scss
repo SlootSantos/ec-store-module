@@ -1,4 +1,4 @@
- $break-small: 400px;
+$break-small: 400px;
 $break-medium: 767px;
 $break-large: 1200px;
 $primaryColor: rgba(72, 45, 42, 1);
@@ -79,6 +79,7 @@ $redesignSecondaryColor: #a0a0a0;
         min-height: 300px;
         height: fit-content;
         width: 80vw;
+        max-width: 900px;
 
         .fp_mantra_redesign_content_image {
           width: 30%;
@@ -89,6 +90,7 @@ $redesignSecondaryColor: #a0a0a0;
 
         .fp_mantra_redesign_content_text {
           width: 60%;
+          max-width: 600px;
           padding: 30px;
           flex-grow: 1;
 
@@ -368,7 +370,7 @@ $redesignSecondaryColor: #a0a0a0;
     display: grid;
     text-align: center;
 
-    background: $secondaryColor;
+    background: white;
     color: white;
 
     .fp__three-headline {
@@ -498,7 +500,7 @@ $redesignSecondaryColor: #a0a0a0;
       background: white;
       color: black;
 
-      max-width: 100vw;
+      max-width: 900px;
 
       padding: 50px 0;
 
@@ -579,7 +581,6 @@ $redesignSecondaryColor: #a0a0a0;
 
           .fp__three_redesign_items_content {
             height: fit-content;
-            min-height: stretch;
 
             padding: 0 10px;
             .fp__three_redesign_items_image {
