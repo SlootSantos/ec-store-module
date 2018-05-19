@@ -376,7 +376,6 @@
           padding: 0 10px; }
           .full_page.fp__three .fp__three_redesign .fp__three_redesign_item_wrapper .fp__three_redesign_items .fp__three_redesign_items_content .fp__three_redesign_items_image {
             padding-top: 10px;
-            min-height: 50%;
             height: fit-content;
             display: flex;
             justify-content: center; }
