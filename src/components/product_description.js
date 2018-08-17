@@ -14,7 +14,8 @@ function ProductDescription(props) {
     quantity,
     mwst,
     delivery,
-    availableInfo
+    availableInfo,
+    soldOut
   } = product;
   const formattedPrice = `${price} / ${quantity}`;
 
@@ -33,18 +34,32 @@ function ProductDescription(props) {
       <ul>{bullets.map(i => <li key={i}>{i}</li>)}</ul>
 
       <div className="product-page__quantity">
-        {availableInfo && (
+        {availableInfo &&
+          !soldOut && (
+            <p className="product-page__quantity_unavailable">
+              Die {availableInfo.toLowerCase()} Variante ist <b>ausverkauft</b>
+            </p>
+          )}
+        {soldOut && (
           <p className="product-page__quantity_unavailable">
-            Die {availableInfo.toLowerCase()} Variante ist <b>ausverkauft</b>
+            Zurzeit sind alle Varianten dieses Produktes <b>ausverkauft</b>
           </p>
         )}
         <b>Anzahl: </b>
-        <input type="number" min="1" max="10" value={quantityNumber} onChange={onNumberChange} />
+        <input
+          disabled={soldOut}
+          type="number"
+          min="1"
+          max="10"
+          value={quantityNumber}
+          onChange={onNumberChange}
+        />
       </div>
 
       <button
-        className={`btn redesign${loading ? '-secondary' : '-white'}`}
+        className={`btn redesign${loading ? '-secondary' : '-white'} ${soldOut ? 'disabled' : ''}`}
         onClick={() => addToCart(id, quantityNumber)}
+        disabled={soldOut}
       >
         {loading ? 'einpacken…' : 'In den Einkaufswagen'}
       </button>
