@@ -16,6 +16,21 @@ $redesignSecondaryColor: #a0a0a0;
 }
 
 .full_page {
+  &.fp__polaroid {
+    min-height: 50vh;
+    width: 100vw;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+
+    .image_wrapper {
+      img {
+        height: 500px;
+      }
+    }
+  }
+
   &.fp__one {
     height: 600px;
     background: url('../../assets/header.img.jpg');

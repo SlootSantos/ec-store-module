@@ -18,7 +18,7 @@ function prodDescription(products) {
         </div>
         <div className="fp__two_redesign_product_details">
           <div className="fp__two_redesign_product_details_price">
-            <span>250g</span>
+            <span>{prod.quantity}</span>
             <span>
               <h3>
                 <b>{prod.price}</b>
@@ -48,9 +48,7 @@ function FullPageTwo(props) {
     <div className="full_page fp__two">
       <div className="fp__two_redesign">
         <h1>Unsere Kaffees</h1>
-        <div className="fp__two_redesign_container">
-          {prodDescription(products)}
-        </div>
+        <div className="fp__two_redesign_container">{prodDescription(products)}</div>
       </div>
       {/* <div className="item-wrapper">{prodDescription(products)}</div>
       <div className="disclaimer">
@@ -74,15 +72,13 @@ FullPageTwo.defaultProps = {
 };
 
 FullPageTwo.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
+  products: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       price: PropTypes.string,
       description: PropTypes.string,
       imgSrc: PropTypes.string,
       bullets: PropTypes.arrayOf(PropTypes.string)
-    })
-  )
+    }))
 };
 
 export default FullPageTwo;

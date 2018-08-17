@@ -11,6 +11,7 @@ import Classic from '../assets/CaPhePhin_white.svg';
 import Filter from '../assets/FrenchPress_white.svg';
 import VietFilter from '../assets/viet.Filter_white.svg';
 import Milk from '../assets/milk_white.svg';
+import Polaroid from '../assets/polaroid.png';
 
 import '../styles/landingpage/landing_page.css';
 
@@ -27,7 +28,8 @@ export const mockData = [
     price: '€8,90',
     quantity: '250g',
     delivery: 'sofort lieferbar',
-    mwst: '7%'
+    mwst: '7%',
+    soldOut: true
   },
   {
     name: 'Thanh Trúc',
@@ -42,7 +44,8 @@ export const mockData = [
     quantity: '250g',
     delivery: 'sofort lieferbar',
     mwst: '7%',
-    availableInfo: 'Gemahlene'
+    availableInfo: 'Gemahlene',
+    soldOut: true
   },
   {
     name: 'Dình Huy',
@@ -56,7 +59,8 @@ export const mockData = [
     price: '€10,90',
     quantity: '250g',
     delivery: 'sofort lieferbar',
-    mwst: '7%'
+    mwst: '7%',
+    soldOut: true
   },
   {
     name: 'V|O Coffee Filter',
@@ -67,7 +71,7 @@ export const mockData = [
     description:
       'Um den traditionellen Kaffee „Ca Phe Phin“ zubereiten zu können, benötigt man den dazugehörigen Kaffeefilter „Phin“, der gleichzeitig auch Namensgeber des Kaffees ist.',
     bullets: [],
-    price: '€8,00',
+    price: '€10,00',
     quantity: 'Stück',
     delivery: 'sofort lieferbar',
     mwst: '19%'
@@ -83,7 +87,8 @@ export const mockData = [
     price: '€2,00',
     quantity: 'Dose',
     delivery: 'sofort lieferbar',
-    mwst: '7%'
+    mwst: '7%',
+    soldOut: true
   }
 ];
 
@@ -92,6 +97,14 @@ export function LandingPage() {
     <div className="main_container">
       <FullpageOne />
       <FullPageMantra />
+      <div className="full_page fp__polaroid">
+        <div>
+          <h1>HELLO WORLD</h1>
+        </div>
+        <div className="image_wrapper">
+          <img src={Polaroid} alt="" />
+        </div>
+      </div>
       <FullPageTwo products={mockData} />
       <FullPageThree />
     </div>

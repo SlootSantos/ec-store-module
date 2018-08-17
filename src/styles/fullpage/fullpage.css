@@ -3,6 +3,15 @@
   width: 100vw;
   border-bottom: 5px solid #00d499; }
 
+.full_page.fp__polaroid {
+  min-height: 50vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  justify-content: center; }
+  .full_page.fp__polaroid .image_wrapper img {
+    height: 500px; }
+
 .full_page.fp__one {
   height: 600px;
   background: url("../../assets/header.img.jpg");
